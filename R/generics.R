@@ -42,9 +42,9 @@ call_slack <- function(slack_method, body) {
   structure(res, class = c(slack_method, class(res)), slack_method = slack_method, cursor = cursor, body = body)
 }
 
-#' @importFrom httr warn_for_status content
+#' @importFrom httr stop_for_status content
 validate_response <- function(res) {
-  httr::warn_for_status(res)
+  httr::stop_for_status(res)
 
   res_content <- httr::content(res)
 
