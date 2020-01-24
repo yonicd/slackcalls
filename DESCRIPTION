@@ -1,0 +1,18 @@
+Type: Package
+Package: slackcalls
+Title: Generics for Slack API
+Version: 0.0.1
+Authors@R: 
+    person(given = "Jonathan",
+           family = "Sidi",
+           role = c("cre","aut"),
+           email = "yonicd@gmail.com",
+           comment = c(ORCID = "0000-0002-4222-1819"))
+Description: Generic functions to construct API calls to Slack.
+Depends: R (>= 3.2.0)
+Imports: httr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+License: MIT + file LICENSE
