@@ -1,27 +1,48 @@
-#' @title FUNCTION_TITLE
-#' @description FUNCTION_DESCRIPTION
-#' @param slack_method PARAM_DESCRIPTION
-#' @param max_results PARAM_DESCRIPTION, Default: Inf
-#' @param max_calls PARAM_DESCRIPTION, Default: Inf
-#' @param paginate PARAM_DESCRIPTION, Default: TRUE
-#' @param ... PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @title Call a Slack API Method
+#' @description Safely call a Slack API method, with automatic pagination.
+#' @param slack_method Character. The Slack API method to call, such as
+#'   "conversations.history".
+#' @param token Character. Your Slack API token.
+#' @param max_results Integer. The maximum number of results to return (total).
+#'   Note: The actual maximum will be \code{max_results} rounded up to a
+#'   multiple of \code{limit}. Default: Inf
+#' @param max_calls Integer. The maximum number of separate API calls to make
+#'   while constructing the response. Default: Inf
+#' @param limit Integer. The number of results to fetch per call. Default:
+#'   1000L
+#' @param paginate Logical. Whether to make multiple API calls if additional
+#'   results are available. Default: TRUE
+#' @param ... Additional arguments to pass to the body of the method call. Note:
+#'   if you pass an explicit \code{limit}, this may cause conflicts. We
+#'   recommend using \code{max_results} and \code{max_calls}.
+#' @return A list with an additional class corresponding to \code{slack_method}.
 #' @examples
 #' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
+#' post_slack(
+#'   slack_method = "conversations.history",
+#'   channel = "general",
+#'   token = "my_api_token"
+#' )
 #' }
 #' @rdname post_slack
 #' @export
-post_slack <- function(slack_method, max_results = Inf, max_calls = Inf, paginate = TRUE, ...){
+post_slack <- function(slack_method,
+                       token,
+                       max_results = Inf,
+                       max_calls = Inf,
+                       limit = 1000L,
+                       paginate = TRUE,
+                       ...){
 
   body <- list(...)
+  body$token <- token
+
+  # Deal with maxes and limits.
+  body$limit <- min(limit, max_results)
 
   res <- call_slack(slack_method, body = body)
 
-  if(paginate & max_calls > 1)
+  if (paginate & max_calls > 1 & max_results > body$limit)
     res <- paginate_(res, max_results = max_results, max_calls = max_calls)
 
   res
@@ -31,7 +52,12 @@ post_slack <- function(slack_method, max_results = Inf, max_calls = Inf, paginat
 #' @importFrom httr POST
 call_slack <- function(slack_method, body) {
 
-  res <- validate_response(res = httr::POST(file.path("https://slack.com/api", slack_method), body = body))
+  res <- validate_response(
+    res = httr::POST(
+      url = file.path("https://slack.com/api", slack_method),
+      body = body
+    )
+  )
 
   cursor <- NULL
 
@@ -39,7 +65,13 @@ call_slack <- function(slack_method, body) {
     cursor <- res[["response_metadata"]][["next_cursor"]]
   }
 
-  structure(res, class = c(slack_method, class(res)), slack_method = slack_method, cursor = cursor, body = body)
+  structure(
+    res,
+    class = c(slack_method, class(res)),
+    slack_method = slack_method,
+    cursor = cursor,
+    body = body
+  )
 }
 
 #' @importFrom httr stop_for_status content
@@ -48,26 +80,28 @@ validate_response <- function(res) {
 
   res_content <- httr::content(res)
 
-  if (!res_content$ok) {
-    return(res_content$error)
-  }
+  if (!res_content$ok) { # nocov start
+    stop(res_content$error)
+  } # nocov end
 
   res_content
 }
 
-
 paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
 
-  if (is.null(res$has_more)) {
+  if (is.null(res$has_more) | max_calls == 1) { # nocov start
     return(res)
-  }
+  } # nocov end
 
   res_body <- attr(res, "body")
 
-  if(!is.null(res_body$limit))
-    max_calls <- ceiling(max_results/res_body$limit)
+  # Call until we either hit max_results or max_calls.
+  max_calls <- min(
+    ceiling(max_results/res_body$limit),
+    max_calls
+  )
 
-  i <- 1
+  i <- 1L
   cont <- TRUE
   output <- list()
   output[[i]] <- res
@@ -87,11 +121,18 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
     }
   }
 
-  el <- setdiff(names(res), c("ok", "response_metadata", "has_more","is_limited","pin_count","channel_actions_ts","channel_actions_count"))
+  # Combine the results as if everything came back in a single call.
+  el <- setdiff(
+    names(res),
+    c(
+      "ok", "response_metadata", "has_more", "is_limited", "pin_count",
+      "channel_actions_ts", "channel_actions_count"
+    )
+  )
 
   el_list <- lapply(output, function(x, what) x[[what]], what = el)
 
-  res[[el]] <- Reduce(f = append,  x = el_list)
+  res[[el]] <- Reduce(f = append, x = el_list)
 
   res
 }
