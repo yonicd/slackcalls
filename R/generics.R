@@ -58,6 +58,10 @@ validate_response <- function(res) {
 
 paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
 
+  if (is.null(res$has_more)) {
+    return(res)
+  }
+
   res_body <- attr(res, "body")
 
   if(!is.null(res_body$limit))
@@ -66,20 +70,16 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
   i <- 1
   cont <- TRUE
   output <- list()
-
   output[[i]] <- res
-  if (is.null(attr(output[[i]], "cursor"))) {
-    return(res)
-  }
 
   while (cont && i < max_calls) {
     this_body <- attr(output[[i]], "body")
     this_body$cursor <- attr(output[[i]], "cursor")
 
-    cont <- nzchar(this_body$cursor)
+    cont <- output[[i]]$has_more
 
     if (cont) {
-      this_res <- call_slack(attr(res, "call"), body = this_body)
+      this_res <- call_slack(attr(res, "slack_method"), body = this_body)
 
       output <- append(output, list(this_res))
 
@@ -87,7 +87,7 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
     }
   }
 
-  el <- setdiff(names(res), c("ok", "response_metadata"))
+  el <- setdiff(names(res), c("ok", "response_metadata", "has_more","is_limited","pin_count","channel_actions_ts","channel_actions_count"))
 
   el_list <- lapply(output, function(x, what) x[[what]], what = el)
 
