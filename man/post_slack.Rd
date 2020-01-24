@@ -10,7 +10,6 @@ post_slack(
   max_results = Inf,
   max_calls = Inf,
   limit = 1000L,
-  paginate = TRUE,
   ...
 )
 }
@@ -29,9 +28,6 @@ while constructing the response. Default: Inf}
 
 \item{limit}{Integer. The number of results to fetch per call. Default:
 1000L}
-
-\item{paginate}{Logical. Whether to make multiple API calls if additional
-results are available. Default: TRUE}
 
 \item{...}{Additional arguments to pass to the body of the method call. Note:
 if you pass an explicit \code{limit}, this may cause conflicts. We

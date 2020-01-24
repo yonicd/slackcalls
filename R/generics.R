@@ -10,8 +10,6 @@
 #'   while constructing the response. Default: Inf
 #' @param limit Integer. The number of results to fetch per call. Default:
 #'   1000L
-#' @param paginate Logical. Whether to make multiple API calls if additional
-#'   results are available. Default: TRUE
 #' @param ... Additional arguments to pass to the body of the method call. Note:
 #'   if you pass an explicit \code{limit}, this may cause conflicts. We
 #'   recommend using \code{max_results} and \code{max_calls}.
@@ -31,7 +29,6 @@ post_slack <- function(slack_method,
                        max_results = Inf,
                        max_calls = Inf,
                        limit = 1000L,
-                       paginate = TRUE,
                        ...){
 
   body <- list(...)
@@ -42,22 +39,15 @@ post_slack <- function(slack_method,
 
   res <- call_slack(slack_method, body = body)
 
-  if (paginate & max_calls > 1 & max_results > body$limit)
+  if (max_calls > 1 & max_results > body$limit)
     res <- paginate_(res, max_results = max_results, max_calls = max_calls)
 
   res
 
 }
 
-#' @importFrom httr POST
 call_slack <- function(slack_method, body) {
-
-  res <- validate_response(
-    res = httr::POST(
-      url = file.path("https://slack.com/api", slack_method),
-      body = body
-    )
-  )
+  res <- validate_response(slack_method, body)
 
   cursor <- NULL
 
@@ -74,8 +64,12 @@ call_slack <- function(slack_method, body) {
   )
 }
 
-#' @importFrom httr stop_for_status content
-validate_response <- function(res) {
+#' @importFrom httr stop_for_status content POST
+validate_response <- function(slack_method, body) {
+  res <- httr::POST(
+    url = file.path("https://slack.com/api", slack_method),
+    body = body
+  )
   httr::stop_for_status(res)
 
   res_content <- httr::content(res)
@@ -105,15 +99,15 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
   cont <- TRUE
   output <- list()
   output[[i]] <- res
+  slack_method <- attr(res, "slack_method")
 
   while (cont && i < max_calls) {
-    this_body <- attr(output[[i]], "body")
-    this_body$cursor <- attr(output[[i]], "cursor")
-
     cont <- output[[i]]$has_more
 
     if (cont) {
-      this_res <- call_slack(attr(res, "slack_method"), body = this_body)
+      this_body <- attr(output[[i]], "body")
+      this_body$cursor <- attr(output[[i]], "cursor")
+      this_res <- call_slack(slack_method, body = this_body)
 
       output <- append(output, list(this_res))
 

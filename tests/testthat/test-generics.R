@@ -10,18 +10,31 @@ token <- Sys.getenv("SLACK_API_TOKEN")
 channel <- "C6VCZPGPR"
 
 test_that("calls work", {
+  # This one test does an actual call to the api, to make sure everything is
+  # working as expected.
   test_result <- post_slack(
     slack_method = "conversations.history",
     token = token,
-    channel = channel
+    channel = channel,
+    max_results = 1
   )
   expect_identical(
     names(test_result),
     c(
       "ok", "messages", "has_more", "is_limited", "pin_count",
-      "channel_actions_ts", "channel_actions_count"
+      "channel_actions_ts", "channel_actions_count", "response_metadata"
     )
   )
+
+  # Everything below here should ideally use a mock, but, well, that'll involve
+  # doing a whole bunch of mini calls, and I want to work on other things first.
+
+  test_result <- post_slack(
+    slack_method = "conversations.history",
+    token = token,
+    channel = channel
+  )
+
   # This is technically slightly fragile. If We have a ton of posts in channels
   # other than 5_general_r_questions on the r4ds slack, the number of posts in
   # general that are available could go down. It should always be more than 300,
