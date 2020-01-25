@@ -2,35 +2,49 @@
 % Please edit documentation in R/generics.R
 \name{post_slack}
 \alias{post_slack}
-\title{FUNCTION_TITLE}
+\title{Call a Slack API Method}
 \usage{
-post_slack(slack_method, max_results = Inf, max_calls = Inf,
-  paginate = TRUE, ...)
+post_slack(
+  slack_method,
+  token,
+  max_results = Inf,
+  max_calls = Inf,
+  limit = 1000L,
+  ...
+)
 }
 \arguments{
-\item{slack_method}{PARAM_DESCRIPTION}
+\item{slack_method}{Character. The Slack API method to call, such as
+"conversations.history".}
 
-\item{max_results}{PARAM_DESCRIPTION, Default: Inf}
+\item{token}{Character. Your Slack API token.}
 
-\item{max_calls}{PARAM_DESCRIPTION, Default: Inf}
+\item{max_results}{Integer. The maximum number of results to return (total).
+Note: The actual maximum will be \code{max_results} rounded up to a
+multiple of \code{limit}. Default: Inf}
 
-\item{paginate}{PARAM_DESCRIPTION, Default: TRUE}
+\item{max_calls}{Integer. The maximum number of separate API calls to make
+while constructing the response. Default: Inf}
 
-\item{...}{PARAM_DESCRIPTION}
+\item{limit}{Integer. The number of results to fetch per call. Default:
+1000L}
+
+\item{...}{Additional arguments to pass to the body of the method call. Note:
+if you pass an explicit \code{limit}, this may cause conflicts. We
+recommend using \code{max_results} and \code{max_calls}.}
 }
 \value{
-OUTPUT_DESCRIPTION
+A list with an additional class corresponding to \code{slack_method}.
 }
 \description{
-FUNCTION_DESCRIPTION
-}
-\details{
-DETAILS
+Safely call a Slack API method, with automatic pagination.
 }
 \examples{
 \dontrun{
-if(interactive()){
- #EXAMPLE1
- }
+post_slack(
+  slack_method = "conversations.history",
+  channel = "general",
+  token = "my_api_token"
+)
 }
 }
