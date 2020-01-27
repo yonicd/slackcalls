@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-26 January, 2020 21:31:14
+27 January, 2020 03:19:07
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -23,27 +23,26 @@ Coverage summary is created using the
 ## Unit Tests
 
 Unit Test summary is created using the
-[testthat](https://github.com/r-lib/testthat)
-package.
+[testthat](https://github.com/r-lib/testthat) package.
 
 | file                                        | n |  time | error | failed | skipped | warning |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R) | 7 | 0.009 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R) | 8 | 0.038 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
-<summary> Show Detailed Test Results
-</summary>
+<summary> Show Detailed Test Results </summary>
 
 | file                                                | context  | test                            | status | n |  time |
 | :-------------------------------------------------- | :------- | :------------------------------ | :----- | -: | ----: |
-| [test-generics.R](testthat/test-generics.R#L21)     | generics | calls work: ok result           | PASS   | 1 | 0.001 |
-| [test-generics.R](testthat/test-generics.R#L25_L31) | generics | calls work: names of return     | PASS   | 1 | 0.002 |
-| [test-generics.R](testthat/test-generics.R#L67_L70) | generics | limits: limit attribute         | PASS   | 1 | 0.002 |
-| [test-generics.R](testthat/test-generics.R#L74_L77) | generics | limits: limit messages          | PASS   | 1 | 0.002 |
-| [test-generics.R](testthat/test-generics.R#L81_L84) | generics | limits: names of results object | PASS   | 1 | 0.000 |
-| [test-generics.R](testthat/test-generics.R#L101)    | generics | maxes are respected: 200 length | PASS   | 1 | 0.001 |
-| [test-generics.R](testthat/test-generics.R#L113)    | generics | maxes are respected: 200 length | PASS   | 1 | 0.001 |
+| [test-generics.R](testthat/test-generics.R#L18)     | generics | calls work: ok result           | PASS   | 1 | 0.029 |
+| [test-generics.R](testthat/test-generics.R#L22_L28) | generics | calls work: names of return     | PASS   | 1 | 0.002 |
+| [test-generics.R](testthat/test-generics.R#L42)     | generics | limits: more than 300           | PASS   | 1 | 0.001 |
+| [test-generics.R](testthat/test-generics.R#L53_L56) | generics | limits: limit attribute         | PASS   | 1 | 0.002 |
+| [test-generics.R](testthat/test-generics.R#L60_L63) | generics | limits: limit messages          | PASS   | 1 | 0.002 |
+| [test-generics.R](testthat/test-generics.R#L67_L70) | generics | limits: names of results object | PASS   | 1 | 0.000 |
+| [test-generics.R](testthat/test-generics.R#L87)     | generics | maxes are respected: 300 length | PASS   | 1 | 0.001 |
+| [test-generics.R](testthat/test-generics.R#L99)     | generics | maxes are respected: 200 length | PASS   | 1 | 0.001 |
 
 </details>
 
@@ -51,19 +50,19 @@ package.
 
 <summary> Session Info </summary>
 
-| Field    | Value                               |
-| :------- | :---------------------------------- |
-| Version  | R version 3.6.1 (2019-07-05)        |
-| Platform | x86\_64-apple-darwin15.6.0 (64-bit) |
-| Running  | macOS Mojave 10.14.5                |
-| Language | en\_US                              |
-| Timezone | America/New\_York                   |
+| Field    | Value                               |                                                                                                                                                                                                                                                                    |
+| :------- | :---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Version  | R version 3.6.2 (2019-12-12)        |                                                                                                                                                                                                                                                                    |
+| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/fca79f757c0c14b8cc7276c41c046f15d0a1fa64/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
+| Running  | macOS Catalina 10.15.2              |                                                                                                                                                                                                                                                                    |
+| Language | en\_US                              |                                                                                                                                                                                                                                                                    |
+| Timezone | UTC                                 |                                                                                                                                                                                                                                                                    |
 
 | Package  | Version |
 | :------- | :------ |
-| testthat | 2.2.1   |
-| covr     | 3.3.0   |
-| covrpage | 0.0.70  |
+| testthat | 2.3.1   |
+| covr     | 3.3.2   |
+| covrpage | 0.0.71  |
 
 </details>
 
