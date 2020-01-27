@@ -39,6 +39,8 @@ jobs:
         run: Rscript -e "install.packages('remotes')" -e "remotes::install_deps(dependencies = TRUE)" -e "remotes::install_cran('rcmdcheck')"
 
       - name: Check
+        env:
+          SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
         run: Rscript -e "rcmdcheck::rcmdcheck(args = '${{ matrix.config.args }}', error_on = 'warning', check_dir = 'check')"
 
       - name: covr
@@ -50,6 +52,8 @@ jobs:
         run: R CMD INSTALL .
 
       - name: covrpage
+        env:
+          SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
         if: github.ref == 'refs/heads/master'
         run: |
           Rscript -e 'remotes::install_github("metrumresearchgroup/covrpage@actions")' \
