@@ -4,6 +4,7 @@
 [![R-win build status](https://github.com/yonicd/slackcalls/workflows/R-win/badge.svg)](https://github.com/yonicd/slackcalls)
 [![R-mac build status](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackcalls)
 [![R-linux build status](https://github.com/yonicd/slackcalls/workflows/R-linux/badge.svg)](https://github.com/yonicd/slackcalls)
+[![Codecov test coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slackcalls?branch=master)
 <!-- badges: end -->
 
 # slackcalls
