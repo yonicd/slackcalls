@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-28 January, 2020 00:59:28
+28 January, 2020 01:04:08
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -27,7 +27,7 @@ Unit Test summary is created using the
 
 | file                                        | n |  time | error | failed | skipped | warning |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R) | 8 | 0.043 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R) | 8 | 0.044 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -38,7 +38,7 @@ Unit Test summary is created using the
 | [test-generics.R](testthat/test-generics.R#L18)     | generics | calls work: ok result           | PASS   | 1 | 0.034 |
 | [test-generics.R](testthat/test-generics.R#L22_L28) | generics | calls work: names of return     | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L42)     | generics | limits: more than 300           | PASS   | 1 | 0.001 |
-| [test-generics.R](testthat/test-generics.R#L53_L56) | generics | limits: limit attribute         | PASS   | 1 | 0.001 |
+| [test-generics.R](testthat/test-generics.R#L53_L56) | generics | limits: limit attribute         | PASS   | 1 | 0.002 |
 | [test-generics.R](testthat/test-generics.R#L60_L63) | generics | limits: limit messages          | PASS   | 1 | 0.002 |
 | [test-generics.R](testthat/test-generics.R#L67_L70) | generics | limits: names of results object | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L87)     | generics | maxes are respected: 300 length | PASS   | 1 | 0.001 |
@@ -53,7 +53,7 @@ Unit Test summary is created using the
 | Field    | Value                               |                                                                                                                                                                                                                                                                    |
 | :------- | :---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Version  | R version 3.6.2 (2019-12-12)        |                                                                                                                                                                                                                                                                    |
-| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/971d726539584f4796cdfc8ae4129b3eb3014245/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
+| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/7cf33ef880ffe301572737e491dcfd8a8fd8d2cc/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
 | Running  | macOS Catalina 10.15.2              |                                                                                                                                                                                                                                                                    |
 | Language | en\_US                              |                                                                                                                                                                                                                                                                    |
 | Timezone | UTC                                 |                                                                                                                                                                                                                                                                    |
