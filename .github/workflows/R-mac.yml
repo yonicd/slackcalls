@@ -59,5 +59,6 @@ jobs:
           git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:${{ github.ref }} || echo "No changes to commit"
 
       - name: trigger revdep
-      run: |
+        if: github.ref == 'refs/heads/master'
+        run: |
         curl -XPOST -u "${{github.actor}}:${{secrets.GITHUB_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json"  -H "Content-Type: application/json" https://api.github.com/repos/yonicd/slackteams/dispatches --data '{"event_type": "build_application"}'
