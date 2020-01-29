@@ -6,6 +6,7 @@ jobs:
   check:
     runs-on: ${{ matrix.config.os }}
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+    if: "!contains(github.event.head_commit.message, 'skip mac')"
 
     strategy:
       fail-fast: false
@@ -58,11 +59,20 @@ jobs:
           git commit tests/README.md -m 'Update tests/README.Rmd' || echo "No changes to commit"
           git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:${{ github.ref }} || echo "No changes to commit"
 
-      - name: Repository Dispatch
+      - name: threads trigger
         if: github.ref == 'refs/heads/master'
         uses: peter-evans/repository-dispatch@v1.0.0
         with:
           token: ${{secrets.GITHUB_PAT}}
           repository: yonicd/slackteams
+          event-type: my-event
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+
+      - name: threads trigger
+        if: github.ref == 'refs/heads/master'
+        uses: peter-evans/repository-dispatch@v1.0.0
+        with:
+          token: ${{secrets.GITHUB_PAT}}
+          repository: yonicd/threads
           event-type: my-event
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
