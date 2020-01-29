@@ -9,16 +9,19 @@
   <td>&nbsp;</td>
   <td>
   <h4>Dependencies</h4>
-  httr: [![Travis build status](https://travis-ci.org/r-lib/httr.svg?branch=master)](https://travis-ci.org/r-lib/httr)
+   httr:
+    <img src="https://travis-ci.org/r-lib/httr.svg?branch=master">
   <br>
-  testthat: ![R-CMD-check](https://github.com/r-lib/testthat/workflows/R-CMD-check/badge.svg)
+  testthat: 
+    <img src="https://github.com/r-lib/testthat/workflows/R-CMD-check/badge.svg">
   </td>
 </tr>
 
 <tr>
   <td> 
   <h4>Parent Repository</h4>
-  slackcalls: ![slackcalls](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)  
+  slackcalls: 
+    <img src="https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg">
   </td>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
@@ -29,9 +32,9 @@
   <td>&nbsp;</td>
   <td>
   <h4>Reverse Dependencies</h4>
-  threads: ![threads](https://github.com/yonicd/threads/workflows/Repository%20Dispatch/badge.svg)
+  threads: <img src="https://github.com/yonicd/threads/workflows/Repository%20Dispatch/badge.svg">
   <br>
-  slackteams: ![slackteams](https://github.com/yonicd/slackteams/workflows/Repository%20Dispatch/badge.svg)
+  slackteams: <img src="https://github.com/yonicd/slackteams/workflows/Repository%20Dispatch/badge.svg">
   </td>
 </tr>
 
