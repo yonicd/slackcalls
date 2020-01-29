@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-29 January, 2020 15:05:15
+29 January, 2020 15:31:55
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -27,7 +27,7 @@ Unit Test summary is created using the
 
 | file                                        | n |  time | error | failed | skipped | warning |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R) | 8 | 0.045 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R) | 8 | 0.055 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -35,14 +35,14 @@ Unit Test summary is created using the
 
 | file                                                | context  | test                            | status | n |  time |
 | :-------------------------------------------------- | :------- | :------------------------------ | :----- | -: | ----: |
-| [test-generics.R](testthat/test-generics.R#L18)     | generics | calls work: ok result           | PASS   | 1 | 0.035 |
+| [test-generics.R](testthat/test-generics.R#L18)     | generics | calls work: ok result           | PASS   | 1 | 0.044 |
 | [test-generics.R](testthat/test-generics.R#L22_L28) | generics | calls work: names of return     | PASS   | 1 | 0.001 |
-| [test-generics.R](testthat/test-generics.R#L42)     | generics | limits: more than 300           | PASS   | 1 | 0.002 |
+| [test-generics.R](testthat/test-generics.R#L42)     | generics | limits: more than 300           | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L53_L56) | generics | limits: limit attribute         | PASS   | 1 | 0.002 |
-| [test-generics.R](testthat/test-generics.R#L60_L63) | generics | limits: limit messages          | PASS   | 1 | 0.002 |
+| [test-generics.R](testthat/test-generics.R#L60_L63) | generics | limits: limit messages          | PASS   | 1 | 0.003 |
 | [test-generics.R](testthat/test-generics.R#L67_L70) | generics | limits: names of results object | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L87)     | generics | maxes are respected: 300 length | PASS   | 1 | 0.001 |
-| [test-generics.R](testthat/test-generics.R#L99)     | generics | maxes are respected: 200 length | PASS   | 1 | 0.001 |
+| [test-generics.R](testthat/test-generics.R#L99)     | generics | maxes are respected: 200 length | PASS   | 1 | 0.002 |
 
 </details>
 
@@ -53,7 +53,7 @@ Unit Test summary is created using the
 | Field    | Value                               |                                                                                                                                                                                                                                                                    |
 | :------- | :---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Version  | R version 3.6.2 (2019-12-12)        |                                                                                                                                                                                                                                                                    |
-| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/3f6b98d9a67815a69b29cf51d28ae0c8520a787d/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
+| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/3f8829b0ba8a94f33713c42054e853a55fa88fed/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
 | Running  | macOS Catalina 10.15.2              |                                                                                                                                                                                                                                                                    |
 | Language | en\_US                              |                                                                                                                                                                                                                                                                    |
 | Timezone | UTC                                 |                                                                                                                                                                                                                                                                    |
