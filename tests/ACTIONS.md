@@ -2,17 +2,13 @@
 
 ### Reverse Deps
 
-![threads](https://github.com/yonicd/threads/workflows/Repository%20Dispatch/badge.svg)
-![slackteams](https://github.com/yonicd/slackteams/workflows/Repository%20Dispatch/badge.svg)
+  - threads: ![threads](https://github.com/yonicd/threads/workflows/Repository%20Dispatch/badge.svg)
+  - slackteams: ![slackteams](https://github.com/yonicd/slackteams/workflows/Repository%20Dispatch/badge.svg)
 
-<span style='font-size:100px;width: 50%;'>&#8679;</span>
+### This Repository
 
-## This Repository
-
-![slackcalls](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)
-
-<span style='font-size:100px;'>&#8679;</span>
+  - slackcalls: ![slackcalls](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)
 
 ### Dependencies
 
-[![Travis build status](https://travis-ci.org/r-lib/httr.svg?branch=master)](https://travis-ci.org/r-lib/httr)
+  - httr: [![Travis build status](https://travis-ci.org/r-lib/httr.svg?branch=master)](https://travis-ci.org/r-lib/httr)
