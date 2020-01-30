@@ -38,7 +38,12 @@ jobs:
           key: ${{ runner.os }}-r-${{ matrix.config.r }}-${{ hashFiles('DESCRIPTION') }}
 
       - name: Install dependencies
-        run: Rscript -e "install.packages('remotes')" -e "remotes::install_deps(dependencies = TRUE)" -e "remotes::install_cran('rcmdcheck')"
+        run: |
+          Rscript -e "install.packages('remotes')" \
+                  -e "remotes::install_github('yonicd/shield')" \
+                  -e "shield::install_remotes(obj = shield::create_map('DESCRIPTION'))" \
+                  -e "remotes::install_local(force = TRUE, upgrade = TRUE)" \
+                  -e "remotes::install_cran('rcmdcheck')"
 
       - name: Check
         run: Rscript -e "rcmdcheck::rcmdcheck(args = '${{ matrix.config.args }}', error_on = 'warning', check_dir = 'check')"
