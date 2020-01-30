@@ -42,7 +42,7 @@ jobs:
         run: |
           Rscript -e "install.packages('remotes')" \
                   -e "remotes::install_github('yonicd/shield')" \
-                  -e "shield::install_remotes(obj = shield::create_map('DESCRIPTION'))" \
+                  -e "shield::install_remotes(shield::create_map())" \
                   -e "remotes::install_local(force = TRUE, upgrade = TRUE)" \
                   -e "remotes::install_cran('rcmdcheck')"
 
