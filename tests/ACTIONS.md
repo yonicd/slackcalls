@@ -35,6 +35,8 @@
   threads: <img src="https://github.com/yonicd/threads/workflows/Repository%20Dispatch/badge.svg">
   <br>
   slackteams: <img src="https://github.com/yonicd/slackteams/workflows/Repository%20Dispatch/badge.svg">
+  <br>
+  slackblocks: <img src="https://github.com/yonicd/slackblocks/workflows/Repository%20Dispatch/badge.svg">  
   </td>
 </tr>
 
