@@ -66,3 +66,12 @@ jobs:
           repository: yonicd/threads
           event-type: push
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+
+      - name: slackblocks trigger
+        if: github.ref == 'refs/heads/master'
+        uses: peter-evans/repository-dispatch@v1.0.0
+        with:
+          token: ${{secrets.GITHUB_PAT}}
+          repository: yonicd/slackblocks
+          event-type: push
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
