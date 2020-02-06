@@ -32,7 +32,7 @@
   <td>&nbsp;</td>
   <td>
   <h4>Reverse Dependencies</h4>
-  threads: <img src="https://github.com/yonicd/slackthreads/workflows/Repository%20Dispatch/badge.svg">
+  slackthreads: <img src="https://github.com/yonicd/slackthreads/workflows/Repository%20Dispatch/badge.svg">
   <br>
   slackteams: <img src="https://github.com/yonicd/slackteams/workflows/Repository%20Dispatch/badge.svg">
   <br>
