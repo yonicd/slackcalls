@@ -83,7 +83,7 @@ validate_response <- function(slack_method, body) {
 
 paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
 
-  if (is.null(res$has_more) | max_calls == 1) { # nocov start
+  if (is.null(attr(res, "cursor")) | max_calls == 1) { # nocov start
     return(res)
   } # nocov end
 
@@ -102,7 +102,8 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
   slack_method <- attr(res, "slack_method")
 
   while (cont && i < max_calls) {
-    cont <- output[[i]]$has_more
+
+    cont <- nzchar(attr(output[[i]], "cursor")) && !is.null(attr(output[[i]], "cursor"))
 
     if (cont) {
       this_body <- attr(output[[i]], "body")
@@ -120,7 +121,7 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
     names(res),
     c(
       "ok", "response_metadata", "has_more", "is_limited", "pin_count",
-      "channel_actions_ts", "channel_actions_count"
+      "channel_actions_ts", "channel_actions_count","cache_ts","offset"
     )
   )
 

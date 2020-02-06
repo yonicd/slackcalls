@@ -32,7 +32,7 @@ testthat::describe("calls work", {
 
 testthat::describe('limits',{
 
-  test_result <- post_slack(
+  test_result <- slackcalls::post_slack(
     slack_method = "conversations.history",
     token = token,
     channel = channel
@@ -42,7 +42,7 @@ testthat::describe('limits',{
     testthat::expect_gte(length(test_result$messages),300L)
   })
 
-  test_result_limit_100 <- post_slack(
+  test_result_limit_100 <- slackcalls::post_slack(
     slack_method = "conversations.history",
     token = token,
     channel = channel,
