@@ -58,12 +58,12 @@ jobs:
           event-type: push
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
-      - name: threads trigger
+      - name: slackthreads trigger
         if: github.ref == 'refs/heads/master'
         uses: peter-evans/repository-dispatch@v1.0.0
         with:
           token: ${{secrets.GITHUB_PAT}}
-          repository: yonicd/threads
+          repository: yonicd/slackthreads
           event-type: push
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
