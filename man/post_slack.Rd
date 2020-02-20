@@ -4,8 +4,14 @@
 \alias{post_slack}
 \title{Call a Slack API Method}
 \usage{
-post_slack(slack_method, token, max_results = Inf, max_calls = Inf,
-  limit = 1000L, ...)
+post_slack(
+  slack_method,
+  token,
+  max_results = Inf,
+  max_calls = Inf,
+  limit = 1000L,
+  ...
+)
 }
 \arguments{
 \item{slack_method}{Character. The Slack API method to call, such as

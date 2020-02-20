@@ -46,6 +46,48 @@ post_slack <- function(slack_method,
 
 }
 
+#' @title Upload file or Content to Slack
+#' @description Safely upload files and snippets to Slack
+#' @param slack_method Character. The Slack API method to call, Default: 'file.upload'
+#' @param token Character. Your Slack API token.
+#' @param ... Additional arguments to pass to the body of the method call.
+#' @return A list with an additional class corresponding to \code{slack_method}.
+#' @examples
+#' \dontrun{
+#' upload_slack(
+#'   channel = "general",
+#'   token = "my_api_token",
+#'   content = 'wow'
+#' )
+#'
+#' tf <- tempfile(fileext = '.r')
+#' cat(
+#'   utils::capture.output(utils::sessionInfo()),
+#'   file = tf,
+#'   sep = '\n'
+#' )
+#'
+#' upload_slack(
+#'   channel = "general",
+#'   token = "my_api_token",
+#'   file = tf,
+#'   filename = 'sessionInfo.R',
+#'   filetype = 'r',
+#'   initial_comment = 'here is my session info',
+#'   title = 'R sessionInfo'
+#' )
+#'
+#' unlink(tf)
+#'
+#' }
+#' @rdname upload_slack
+#' @export
+upload_slack <- function(slack_method = 'files.upload',  ..., token){
+  body <- list(...)
+  body$token <- token
+  validate_upload(slack_method = slack_method, body = body)
+}
+
 call_slack <- function(slack_method, body) {
   res <- validate_response(slack_method, body)
 
@@ -64,11 +106,45 @@ call_slack <- function(slack_method, body) {
   )
 }
 
+#' @importFrom httr stop_for_status content POST upload_file add_headers
+validate_upload <- function(slack_method = 'files.upload', body) {
+
+  # fix common typo that user might make
+  if('channel'%in%names(body))
+    names(body)[names(body)=='channel'] <- 'channels'
+
+  if(!is.null(body$file)){
+
+    body$file <- httr::upload_file(body$file)
+
+    res <- httr::POST(
+      url = file.path("https://slack.com/api", slack_method),
+      httr::add_headers(`Content-Type`="multipart/form-data"),
+      body = compact(body)
+    )
+  }else{
+    res <- httr::POST(
+      url = file.path("https://slack.com/api", slack_method),
+      body = compact(body)
+    )
+  }
+
+  httr::stop_for_status(res)
+
+  res_content <- httr::content(res)
+
+  if (!res_content$ok) { # nocov start
+    stop(res_content$error)
+  } # nocov end
+
+  invisible(res_content)
+}
+
 #' @importFrom httr stop_for_status content POST
 validate_response <- function(slack_method, body) {
   res <- httr::POST(
     url = file.path("https://slack.com/api", slack_method),
-    body = body
+    body = compact(body)
   )
   httr::stop_for_status(res)
 
@@ -130,4 +206,10 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
   res[[el]] <- Reduce(f = append, x = el_list)
 
   res
+}
+
+compact <- function(obj){
+
+  obj[lengths(obj)>0]
+
 }
