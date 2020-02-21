@@ -21,16 +21,13 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 
     steps:
-      - uses: actions/checkout@master
-
-      - uses: r-lib/actions/setup-tinytex@master
-        if: contains(matrix.config.args, 'no-manual') == false
-
-      - uses: r-lib/actions/setup-pandoc@master
+      - uses: actions/checkout@v1
 
       - uses: r-lib/actions/setup-r@master
         with:
           r-version: ${{ matrix.config.r }}
+
+      - uses: r-lib/actions/setup-pandoc@master
 
       - name: Cache R packages
         uses: actions/cache@v1
@@ -40,14 +37,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          Rscript -e "install.packages('remotes')" \
-                  -e "remotes::install_github('yonicd/shield')" \
-                  -e "shield::install_remotes(shield::create_map())" \
-                  -e "remotes::install_local(force = TRUE, upgrade = TRUE)" \
-                  -e "remotes::install_cran('rcmdcheck')"
+          install.packages('remotes')
+          remotes::install_github('yonicd/shield')
+          shield::install_remotes(shield::create_map())
+          remotes::install_local(force = TRUE, upgrade = TRUE)
+          remotes::install_cran('rcmdcheck')
+        shell: Rscript {0}
 
       - name: Check
-        run: Rscript -e "rcmdcheck::rcmdcheck(args = '${{ matrix.config.args }}', error_on = 'warning', check_dir = 'check')"
+        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "warning", check_dir = "check")
+        shell: Rscript {0}
 
       - name: slackteams trigger
         if: github.ref == 'refs/heads/master'
