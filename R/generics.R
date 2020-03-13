@@ -135,12 +135,8 @@ validate_upload <- function(slack_method = 'files.upload', body) {
 
   if (!res_content$ok) {
 
-    err_msg <- paste(
-      c(res_content$error,
-        res_content$response_metadata$messages),
-      collapse = '\n  ')
+    stop(slack_err(res_content))
 
-    stop(err_msg)
   }
 
   invisible(res_content)
@@ -157,13 +153,7 @@ validate_response <- function(slack_method, body) {
   res_content <- httr::content(res)
 
   if (!res_content$ok) {
-
-    err_msg <- paste(
-      c(res_content$error,
-        res_content$response_metadata$messages),
-      collapse = '\n  ')
-
-    stop(err_msg)
+    stop(slack_err(res_content))
   }
 
   res_content
@@ -224,4 +214,17 @@ compact <- function(obj){
 
   obj[lengths(obj)>0]
 
+}
+
+#' @title Slack API Error
+#' @description Returns error message from a Slack API response
+#' @param obj httr response content
+#' @return character
+#' @rdname slack_err
+#' @export
+slack_err <- function(obj){
+  paste(
+    c(obj$error,
+      obj$response_metadata$messages),
+    collapse = '\n  ')
 }
