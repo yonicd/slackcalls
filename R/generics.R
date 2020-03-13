@@ -133,9 +133,15 @@ validate_upload <- function(slack_method = 'files.upload', body) {
 
   res_content <- httr::content(res)
 
-  if (!res_content$ok) { # nocov start
-    stop(res_content$error)
-  } # nocov end
+  if (!res_content$ok) {
+
+    err_msg <- paste(
+      c(res_content$error,
+        res_content$response_metadata$messages),
+      collapse = '\n  ')
+
+    stop(err_msg)
+  }
 
   invisible(res_content)
 }
@@ -150,9 +156,15 @@ validate_response <- function(slack_method, body) {
 
   res_content <- httr::content(res)
 
-  if (!res_content$ok) { # nocov start
-    stop(res_content$error)
-  } # nocov end
+  if (!res_content$ok) {
+
+    err_msg <- paste(
+      c(res_content$error,
+        res_content$response_metadata$messages),
+      collapse = '\n  ')
+
+    stop(err_msg)
+  }
 
   res_content
 }

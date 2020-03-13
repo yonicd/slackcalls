@@ -38,8 +38,8 @@ testthat::describe('limits',{
     channel = channel
   )
 
-  it('more than 300',{
-    testthat::expect_gte(length(test_result$messages),300L)
+  it('more than 200',{
+    testthat::expect_gte(length(test_result$messages),200L)
   })
 
   test_result_limit_100 <- slackcalls::post_slack(
@@ -78,13 +78,13 @@ testthat::describe("maxes are respected", {
   test_result <- post_slack(
     slack_method = "conversations.history",
     token = token,
-    max_results = 300,
+    max_results = 200,
     limit = 100,
     channel = channel
   )
 
- it('300 length',{
-    expect_equal(length(test_result$messages),300L)
+ it('200 length',{
+    expect_equal(length(test_result$messages),200L)
    })
 
   test_result <- post_slack(
