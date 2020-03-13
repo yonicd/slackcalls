@@ -88,8 +88,15 @@ upload_slack <- function(slack_method = 'files.upload',  ..., token){
   validate_upload(slack_method = slack_method, body = body)
 }
 
+#' @importFrom httr POST
 call_slack <- function(slack_method, body) {
-  res <- validate_response(slack_method, body)
+
+  res <- httr::POST(
+    url = file.path("https://slack.com/api", slack_method),
+    body = compact(body)
+  )
+
+  res <- validate_response(res)
 
   cursor <- NULL
 
@@ -97,13 +104,48 @@ call_slack <- function(slack_method, body) {
     cursor <- res[["response_metadata"]][["next_cursor"]]
   }
 
-  structure(
+  ret <- structure(
     res,
     class = c(slack_method, class(res)),
     slack_method = slack_method,
     cursor = cursor,
     body = body
   )
+
+  invisible(ret)
+}
+
+#' @title Slack API Error
+#' @description Returns error message from a Slack API response
+#' @param obj httr response content
+#' @return character
+#' @rdname slack_err
+#' @export
+slack_err <- function(obj){
+  paste(
+    c(obj$error,
+      obj$response_metadata$messages),
+    collapse = '\n  ')
+}
+
+#' @title Validate Slack API Response
+#' @description Check Slack API Response for errors
+#' @param res httr response
+#' @return httr response content
+#' @rdname validate_response
+#' @export
+#' @importFrom httr stop_for_status content
+validate_response <- function(res) {
+
+  httr::stop_for_status(res)
+
+  res_content <- httr::content(res)
+
+  if (!res_content$ok) {
+    return(slack_err(res_content))
+  }
+
+  res_content
 }
 
 #' @importFrom httr stop_for_status content POST upload_file add_headers
@@ -129,34 +171,10 @@ validate_upload <- function(slack_method = 'files.upload', body) {
     )
   }
 
-  httr::stop_for_status(res)
+  ret <- validate_response(res)
 
-  res_content <- httr::content(res)
+  invisible(ret)
 
-  if (!res_content$ok) {
-
-    stop(slack_err(res_content))
-
-  }
-
-  invisible(res_content)
-}
-
-#' @importFrom httr stop_for_status content POST
-validate_response <- function(slack_method, body) {
-  res <- httr::POST(
-    url = file.path("https://slack.com/api", slack_method),
-    body = compact(body)
-  )
-  httr::stop_for_status(res)
-
-  res_content <- httr::content(res)
-
-  if (!res_content$ok) {
-    stop(slack_err(res_content))
-  }
-
-  res_content
 }
 
 paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
@@ -214,17 +232,4 @@ compact <- function(obj){
 
   obj[lengths(obj)>0]
 
-}
-
-#' @title Slack API Error
-#' @description Returns error message from a Slack API response
-#' @param obj httr response content
-#' @return character
-#' @rdname slack_err
-#' @export
-slack_err <- function(obj){
-  paste(
-    c(obj$error,
-      obj$response_metadata$messages),
-    collapse = '\n  ')
 }
