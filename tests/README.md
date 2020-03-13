@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-13 March, 2020 01:58:47
+13 March, 2020 02:10:59
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -15,8 +15,8 @@ Coverage summary is created using the
 
 | Object                          | Coverage (%) |
 | :------------------------------ | :----------: |
-| slackcalls                      |    68.67     |
-| [R/generics.R](../R/generics.R) |    68.67     |
+| slackcalls                      |     71.6     |
+| [R/generics.R](../R/generics.R) |     71.6     |
 
 <br>
 
@@ -27,7 +27,7 @@ Unit Test summary is created using the
 
 | file                                        | n |  time | error | failed | skipped | warning |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R) | 8 | 0.046 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R) | 8 | 0.044 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -35,14 +35,14 @@ Unit Test summary is created using the
 
 | file                                                | context  | test                            | status | n |  time |
 | :-------------------------------------------------- | :------- | :------------------------------ | :----- | -: | ----: |
-| [test-generics.R](testthat/test-generics.R#L18)     | generics | calls work: ok result           | PASS   | 1 | 0.035 |
+| [test-generics.R](testthat/test-generics.R#L18)     | generics | calls work: ok result           | PASS   | 1 | 0.034 |
 | [test-generics.R](testthat/test-generics.R#L22_L28) | generics | calls work: names of return     | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L42)     | generics | limits: more than 200           | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L53_L56) | generics | limits: limit attribute         | PASS   | 1 | 0.002 |
 | [test-generics.R](testthat/test-generics.R#L60_L63) | generics | limits: limit messages          | PASS   | 1 | 0.002 |
 | [test-generics.R](testthat/test-generics.R#L67_L70) | generics | limits: names of results object | PASS   | 1 | 0.001 |
 | [test-generics.R](testthat/test-generics.R#L87)     | generics | maxes are respected: 200 length | PASS   | 1 | 0.002 |
-| [test-generics.R](testthat/test-generics.R#L99)     | generics | maxes are respected: 200 length | PASS   | 1 | 0.002 |
+| [test-generics.R](testthat/test-generics.R#L99)     | generics | maxes are respected: 200 length | PASS   | 1 | 0.001 |
 
 </details>
 
@@ -53,7 +53,7 @@ Unit Test summary is created using the
 | Field    | Value                               |                                                                                                                                                                                                                                                                    |
 | :------- | :---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Version  | R version 3.6.3 (2020-02-29)        |                                                                                                                                                                                                                                                                    |
-| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/a1d02b76837f5d8ac404515d4f619fec2e9d00ee/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
+| Platform | x86\_64-apple-darwin15.6.0 (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/958acc45f98a4d7a35d3047fa55f784b9b8438f5/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
 | Running  | macOS Catalina 10.15.3              |                                                                                                                                                                                                                                                                    |
 | Language | en\_US                              |                                                                                                                                                                                                                                                                    |
 | Timezone | UTC                                 |                                                                                                                                                                                                                                                                    |
