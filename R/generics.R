@@ -148,6 +148,23 @@ validate_response <- function(res) {
   res_content
 }
 
+
+#' @title Parse Calls
+#' @description Function used to translate R side functions to slack api methods
+#'   to interact with slack.
+#' @return api method to be used
+#' @rdname parse_call
+#' @export
+parse_call <- function() {
+  tb <- .traceback(1)
+  idx <- which(sapply(tb, function(x) grepl(x[1], pattern = "post\\_slack"))) + 1
+  call_str <- tb[[idx]]
+  foo <- gsub("\\((.*?)$", "", call_str)
+  no_get <- gsub("^(.*?)get_", "", foo)
+  gsub("\\_", ".", no_get)
+}
+
+
 #' @importFrom httr stop_for_status content POST upload_file add_headers
 validate_upload <- function(slack_method = 'files.upload', body) {
 
