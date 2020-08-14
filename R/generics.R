@@ -158,7 +158,7 @@ validate_response <- function(res) {
 parse_call <- function() {
   tb <- .traceback(1)
   idx <- which(sapply(tb, function(x) grepl(x[1], pattern = "post\\_slack"))) + 1
-  call_str <- tb[[idx]]
+  call_str <- paste0(tb[[idx]],collapse = '')
   foo <- gsub("\\((.*?)$", "", call_str)
   no_get <- gsub("^(.*?)get_", "", foo)
   gsub("\\_", ".", no_get)
