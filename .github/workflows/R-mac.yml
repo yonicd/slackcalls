@@ -12,13 +12,13 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - { os: macOS-latest, r: '3.6', args: "--no-manual"}
+        - { os: macOS-latest, r: '4.0', args: "--no-manual"}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       CRAN: ${{ matrix.config.cran }}
       SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
-      GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
 
     steps:
       - uses: actions/checkout@v1
@@ -78,7 +78,7 @@ jobs:
       - name: covrpage
         if: github.ref == 'refs/heads/master'
         run: |
-          remotes::install_github("metrumresearchgroup/covrpage@actions")
+          remotes::install_github("yonicd/covrpage@actions")
           covrpage::covrpage_ci()
         shell: Rscript {0}
 
