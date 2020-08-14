@@ -2,7 +2,7 @@
 token <- Sys.getenv('SLACK_API_TOKEN')
 
 # This is 5_general_r_help on R4DS.
-channel <- "C6VCZPGPR"
+channel <- "CNTFB9215"
 
 testthat::describe("calls work", {
   # This one test does an actual call to the api, to make sure everything is working as expected.
@@ -22,7 +22,7 @@ testthat::describe("calls work", {
    expect_identical(
      names(test_result),
      c(
-       "ok", "messages", "has_more", "is_limited", "pin_count",
+       "ok", "messages", "has_more", "pin_count",
        "channel_actions_ts", "channel_actions_count", "response_metadata"
      )
     )
@@ -38,34 +38,34 @@ testthat::describe('limits',{
     channel = channel
   )
 
-  it('more than 200',{
-    testthat::expect_gte(length(test_result$messages),200L)
+  it('more than 5',{
+    testthat::expect_gte(length(test_result$messages),5L)
   })
 
-  test_result_limit_100 <- slackcalls::post_slack(
+  test_result_limit_3 <- slackcalls::post_slack(
     slack_method = "conversations.history",
     token = token,
     channel = channel,
-    limit = 100L
+    limit = 3L
   )
 
   it('limit attribute',{
     testthat::expect_equal(
-      attr(test_result_limit_100, "body")$limit,
-      100L
+      attr(test_result_limit_3, "body")$limit,
+      3L
     )
   })
 
   it('limit messages',{
      testthat::expect_identical(
-       test_result_limit_100$messages,
+       test_result_limit_3$messages,
        test_result$messages
      )
   })
 
   it('names of results object',{
      testthat::expect_identical(
-       names(test_result_limit_100),
+       names(test_result_limit_3),
        append(names(test_result), "response_metadata")
      )
   })
@@ -78,25 +78,25 @@ testthat::describe("maxes are respected", {
   test_result <- post_slack(
     slack_method = "conversations.history",
     token = token,
-    max_results = 200,
-    limit = 100,
+    max_results = 5,
+    limit = 3,
     channel = channel
   )
 
- it('200 length',{
-    expect_equal(length(test_result$messages),200L)
+ it('6 length',{
+    expect_equal(length(test_result$messages),6L)
    })
 
   test_result <- post_slack(
     slack_method = "conversations.history",
     token = token,
-    limit = 100,
-    max_calls = 2,
+    limit = 5,
+    max_calls = 3,
     channel = channel
   )
 
- it('200 length',{
-   expect_equal(length(test_result$messages),200L)
+ it('6 length',{
+   expect_equal(length(test_result$messages),6L)
  })
 
 })
