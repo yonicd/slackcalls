@@ -250,3 +250,21 @@ compact <- function(obj){
   obj[lengths(obj)>0]
 
 }
+
+
+#' @title Delete post from a channel
+#' @description Delete a post from a channel based on the timestamp (ts).
+#' @param channel character, Channel ID
+#' @param ts character, timestamp
+#' @param token Character. Your Slack API token. Default: Sys.getenv("SLACK_API_TOKEN")
+#' @return A list with an additional class corresponding to \code{slack_method}.
+#' @rdname delete_post
+#' @export
+delete_post <- function(channel,ts,token = Sys.getenv('SLACK_API_TOKEN')){
+
+  call_slack(
+    'chat.delete',
+    body = list(channel = channel, ts = ts, token = token)
+    )
+
+}

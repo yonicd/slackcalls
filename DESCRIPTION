@@ -1,7 +1,7 @@
 Type: Package
 Package: slackcalls
 Title: Generics for Slack API
-Version: 0.0.5
+Version: 0.0.6
 Authors@R: c(
     person(given = "Jonathan",
            family = "Sidi",
