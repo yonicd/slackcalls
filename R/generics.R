@@ -58,6 +58,7 @@ post_slack <- function(slack_method,
 #'    - chat.postMessage
 #'    - chat.delete
 #'    - chat.update
+#'
 #' For a full list of chat methods see [here](https://api.slack.com/methods)
 #' @examples
 #' \dontrun{
@@ -96,11 +97,12 @@ chat_slack <- function(slack_method = 'chat.postMessage',token = Sys.getenv('SLA
 #' @param ... arguments to pass to chat methods
 #' @return httr response
 #' @details
-#'  chat methods available to post to
+#'  files methods available to post to
 #'    - files.upload
 #'    - files.delete
 #'    - files.info
 #'    - files.list
+#'
 #' For a full list of chat methods see [here](https://api.slack.com/methods)
 #' @examples
 #' \dontrun{
