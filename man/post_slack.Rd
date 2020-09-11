@@ -6,7 +6,7 @@
 \usage{
 post_slack(
   slack_method,
-  token,
+  token = Sys.getenv("SLACK_API_TOKEN"),
   max_results = Inf,
   max_calls = Inf,
   limit = 1000L,

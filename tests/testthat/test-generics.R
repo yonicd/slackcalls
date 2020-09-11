@@ -30,6 +30,24 @@ testthat::describe("calls work", {
 
 })
 
+testthat::describe('call error',{
+
+  test_result <- slackcalls::post_slack(
+    slack_method = "conversations.history",
+    token = token,
+    channels = channel,
+    max_results = 1
+  )
+
+  it('ok FALSE',{
+    testthat::expect_false(test_result$ok)
+  })
+
+  it('ok FALSE',{
+    testthat::expect_equal(test_result$error,'channel_not_found')
+  })
+})
+
 testthat::describe('limits',{
 
   test_result <- slackcalls::post_slack(
