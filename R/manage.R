@@ -48,7 +48,7 @@ file_stack <- function(){
 
 post_push <- function(res){
 
-  post_push_internal(list(list(ts = res$ts,channel = res$channel)))
+  post_push_internal(list(list(ts = res$ts,channel = res$channel, thread_ts = res$message$thread_ts)))
 
 }
 
