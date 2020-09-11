@@ -32,8 +32,9 @@ chat methods available to post to
 \item chat.postMessage
 \item chat.delete
 \item chat.update
-For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
+
+For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
 \examples{
 \dontrun{

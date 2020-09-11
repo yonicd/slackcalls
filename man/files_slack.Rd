@@ -24,14 +24,15 @@ httr response
 upload/info/list/delete files
 }
 \details{
-chat methods available to post to
+files methods available to post to
 \itemize{
 \item files.upload
 \item files.delete
 \item files.info
 \item files.list
-For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
+
+For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
 \examples{
 \dontrun{

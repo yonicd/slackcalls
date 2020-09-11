@@ -25,8 +25,9 @@ testthat::describe("chat upload", {
  it('last_post returns attribs',{
    expect_identical(
      structure(list(
-     ts  = test_result$ts,
-     channel = test_result$channel
+      ts  = test_result$ts,
+      channel = test_result$channel,
+      thread_ts = NULL
      ),class = 'slackpost'),
      post_last())
  })
