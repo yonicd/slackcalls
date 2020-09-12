@@ -19,7 +19,17 @@ coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)
 
 # slackcalls
 
-Backend of slackverse to interact with Slack API methods
+`slackcalls` is a part of `slackverse`
+
+|                                                                                                                                 |                                                                                                                                     |                                                                                                                                    |
+| :-----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                                 | slackcalls<br>[![](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackcalls)<br>↙️⬇️↘️ |                                                                                                                                    |
+| slackthreads<br>[![](https://github.com/yonicd/slackthreads/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackthreads) |  slackteams<br>[![](https://github.com/yonicd/slackteams/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackteams)<br>⬅️↘️  |  slackposts<br>[![](https://github.com/yonicd/slackposts/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackposts)<br>⬇️   |
+|                                                                                                                                 |                                                                                                                                     | slackblocks<br>[![](https://github.com/yonicd/slackblocks/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackblocks)<br>⬇️ |
+|                                                                                                                                 |                                                                                                                                     |    slackreprex<br>[![](https://github.com/yonicd/slackreprex/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackreprex)    |
+
+`slackcalls` is the backend of `slackverse` it interacts with Slack API
+methods
 
   - [Posting](#posting-to-slack)
   - [Querying](#querying-slack)

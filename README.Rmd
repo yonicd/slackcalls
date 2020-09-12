@@ -24,7 +24,26 @@ knitr::opts_chunk$set(
 
 # slackcalls
 
-Backend of slackverse to interact with Slack API methods
+`slackcalls` is a part of `slackverse`
+
+```{r,echo = FALSE, eval = TRUE}
+pkgs <- sprintf('slack%s',c('calls','teams','posts','blocks','threads','reprex'))
+
+badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/workflows/R-mac/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
+
+names(badges) <- pkgs
+
+```
+
+||||
+|:-:|:-:|:-:|
+||`r badges[pkgs[1]]`<br>`r emo::ji('down_left_arrow')``r emo::ji('down_arrow')``r emo::ji('down_right_arrow')`||
+|`r badges[pkgs[5]]`|`r badges[pkgs[2]]`<br>`r emo::ji('left_arrow')``r emo::ji('down_right_arrow')`|`r badges[pkgs[3]]`<br>`r emo::ji('down_arrow')`|
+|||`r badges[pkgs[4]]`<br>`r emo::ji('down_arrow')`|
+|||`r badges[pkgs[6]]`|
+
+
+`slackcalls` is the backend of `slackverse` it interacts with Slack API methods
 
   - [Posting](#posting-to-slack)
   - [Querying](#querying-slack)
