@@ -1,7 +1,7 @@
 # Environment Variable Must be Defined (Either by Local .Renviron or Environment variable on CI.)
 token <- Sys.getenv('SLACK_API_TOKEN')
 
-channel <- "DNRKMTFGD"
+channel <- "CNTFB9215"
 
 testthat::describe("content upload", {
 
@@ -9,7 +9,7 @@ testthat::describe("content upload", {
     slack_method = 'files.upload',
        channel = channel,
        token = token,
-       content = 'test'
+       content = 'a sample payload'
   )
 
   it('ok result',{
@@ -53,7 +53,7 @@ testthat::describe("file info", {
  })
 
  it('file info content',{
-   testthat::expect_equal(test_info$content,'test')
+   testthat::expect_equal(test_info$content, 'a sample payload')
  })
 
 })
