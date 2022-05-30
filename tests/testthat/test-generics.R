@@ -1,7 +1,7 @@
 # Environment Variable Must be Defined (Either by Local .Renviron or Environment variable on CI.)
 token <- Sys.getenv('SLACK_API_TOKEN')
 
-# This is 5_general_r_help on R4DS.
+# This is #slack-r on slackr-test
 channel <- "CNTFB9215"
 
 testthat::describe("calls work", {
@@ -44,7 +44,7 @@ testthat::describe('call error',{
   })
 
   it('ok FALSE',{
-    testthat::expect_equal(test_result$error,'channel_not_found')
+    testthat::expect_equal(test_result$error,'invalid_arguments')
   })
 })
 
@@ -74,10 +74,11 @@ testthat::describe('limits',{
     )
   })
 
+  # The 1:12 is to avoid going back too far to where some things are weird.
   it('limit messages',{
      testthat::expect_identical(
-       test_result_limit_3$messages,
-       test_result$messages
+       test_result_limit_3$messages[1:12],
+       test_result$messages[1:12]
      )
   })
 
@@ -101,9 +102,9 @@ testthat::describe("maxes are respected", {
     channel = channel
   )
 
- it('6 length',{
+  it('6 length',{
     expect_equal(length(test_result$messages),6L)
-   })
+  })
 
   test_result <- post_slack(
     slack_method = "conversations.history",
@@ -113,8 +114,11 @@ testthat::describe("maxes are respected", {
     channel = channel
   )
 
- it('6 length',{
-   expect_equal(length(test_result$messages),6L)
- })
+  # This one is grabbing 5 things 3 times, so it should get up to 15 things. The
+  # test seemed to work before because there weren't enough messages to get the
+  # actual limit.
+  it('15 length',{
+    expect_lte(length(test_result$messages),15L)
+  })
 
 })
