@@ -1,6 +1,3 @@
-# internal env  ----
-.slack <- new.env()
-
 # Files  ----
 file_push <- function(res){
 

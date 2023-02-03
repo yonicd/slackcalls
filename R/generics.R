@@ -8,11 +8,14 @@
 #'   multiple of \code{limit}. Default: Inf
 #' @param max_calls Integer. The maximum number of separate API calls to make
 #'   while constructing the response. Default: Inf
-#' @param limit Integer. The number of results to fetch per call. Default:
-#'   1000L
+#' @param limit Integer. The number of results to fetch per call. Default: 1000L
 #' @param ... Additional arguments to pass to the body of the method call. Note:
 #'   if you pass an explicit \code{limit}, this may cause conflicts. We
 #'   recommend using \code{max_results} and \code{max_calls}.
+#' @param rate_limit Integer. The maximum number of calls to make to this
+#'   function per minute. If NULL, calls will not be rate-limited. Note: If a
+#'   limit is set for this method in any call in this session, that rate limit
+#'   will be respected until rate_limit is set to NULL. Default: None.
 #' @return A list with an additional class corresponding to \code{slack_method}.
 #' @examples
 #' \dontrun{
@@ -29,7 +32,11 @@ post_slack <- function(slack_method,
                        max_results = Inf,
                        max_calls = Inf,
                        limit = 1000L,
-                       ...){
+                       ...,
+                       rate_limit){
+  if (!missing(rate_limit)) {
+    rate_limit_set(slack_method, rate_limit)
+  }
 
   body <- list(...)
   body$token <- token
@@ -158,6 +165,8 @@ files_slack <- function(slack_method = 'files.upload',  ..., token = Sys.getenv(
 
 #' @importFrom httr POST
 call_slack <- function(slack_method, body) {
+
+  rate_limit_check(slack_method)
 
   res <- httr::POST(
     url = file.path("https://slack.com/api", slack_method),

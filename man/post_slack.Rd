@@ -10,7 +10,8 @@ post_slack(
   max_results = Inf,
   max_calls = Inf,
   limit = 1000L,
-  ...
+  ...,
+  rate_limit
 )
 }
 \arguments{
@@ -26,12 +27,16 @@ multiple of \code{limit}. Default: Inf}
 \item{max_calls}{Integer. The maximum number of separate API calls to make
 while constructing the response. Default: Inf}
 
-\item{limit}{Integer. The number of results to fetch per call. Default:
-1000L}
+\item{limit}{Integer. The number of results to fetch per call. Default: 1000L}
 
 \item{...}{Additional arguments to pass to the body of the method call. Note:
 if you pass an explicit \code{limit}, this may cause conflicts. We
 recommend using \code{max_results} and \code{max_calls}.}
+
+\item{rate_limit}{Integer. The maximum number of calls to make to this
+function per minute. If NULL, calls will not be rate-limited. Note: If a
+limit is set for this method in any call in this session, that rate limit
+will be respected until rate_limit is set to NULL. Default: None.}
 }
 \value{
 A list with an additional class corresponding to \code{slack_method}.

@@ -1,7 +1,7 @@
 Type: Package
 Package: slackcalls
 Title: Generics for Slack API
-Version: 0.0.6
+Version: 0.0.7
 Authors@R: c(
     person(given = "Jonathan",
            family = "Sidi",
@@ -20,7 +20,7 @@ LazyData: true
 URL: https://github.com/yonicd/slackcalls
 BugReports: https://github.com/yonicd/slackcalls/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 License: MIT + file LICENSE
 Depends: R (>= 3.2.0)
 Imports: 
