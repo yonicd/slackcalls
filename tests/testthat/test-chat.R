@@ -1,6 +1,7 @@
 # Environment Variable Must be Defined (Either by Local .Renviron or Environment variable on CI.)
 token <- Sys.getenv('SLACK_API_TOKEN')
 
+# This is #slack-r on slackr-test
 channel <- "CNTFB9215"
 
 testthat::describe("chat upload", {

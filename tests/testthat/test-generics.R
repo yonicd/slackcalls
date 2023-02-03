@@ -4,6 +4,9 @@ token <- Sys.getenv('SLACK_API_TOKEN')
 # This is #slack-r on slackr-test
 channel <- "CNTFB9215"
 
+# With the current free-tier limits, posts disappear every 90 days. If tests
+# fail, check that there are >= 15 posts in the channel.
+
 testthat::describe("calls work", {
   # This one test does an actual call to the api, to make sure everything is working as expected.
 
@@ -20,10 +23,11 @@ testthat::describe("calls work", {
 
  it('names of return',{
    expect_identical(
-     names(test_result),
+     sort(names(test_result)),
      c(
-       "ok", "messages", "has_more", "pin_count",
-       "channel_actions_ts", "channel_actions_count", "response_metadata"
+       "channel_actions_count", "channel_actions_ts", "has_more",
+       "is_limited", "messages", "ok",
+       "pin_count", "response_metadata"
      )
     )
  })
@@ -57,7 +61,7 @@ testthat::describe('limits',{
   )
 
   it('more than 5',{
-    testthat::expect_gte(length(test_result$messages),5L)
+    testthat::expect_gte(length(test_result$messages), 5L)
   })
 
   test_result_limit_3 <- slackcalls::post_slack(
@@ -103,7 +107,7 @@ testthat::describe("maxes are respected", {
   )
 
   it('6 length',{
-    expect_equal(length(test_result$messages),6L)
+    expect_equal(length(test_result$messages), 6L)
   })
 
   test_result <- post_slack(
@@ -118,7 +122,7 @@ testthat::describe("maxes are respected", {
   # test seemed to work before because there weren't enough messages to get the
   # actual limit.
   it('15 length',{
-    expect_lte(length(test_result$messages),15L)
+    expect_lte(length(test_result$messages), 15L)
   })
 
 })
