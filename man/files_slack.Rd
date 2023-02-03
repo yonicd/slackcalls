@@ -7,7 +7,8 @@
 files_slack(
   slack_method = "files.upload",
   ...,
-  token = Sys.getenv("SLACK_API_TOKEN")
+  token = Sys.getenv("SLACK_API_TOKEN"),
+  rate_limit
 )
 }
 \arguments{
@@ -16,6 +17,12 @@ files_slack(
 \item{...}{arguments to pass to chat methods}
 
 \item{token}{Character. Your Slack API token.}
+
+\item{rate_limit}{Integer. The maximum number of calls to make to this
+function per minute. If NULL, calls will not be rate-limited. If unset,
+calls will be limited per the rate limit guides in the \href{https://api.slack.com/methods}{Slack api method documentation}, if known. Note: If a limit
+is set for this method in any call in this session, that rate limit will be
+respected until rate_limit is set to NULL. Default: None.}
 }
 \value{
 httr response

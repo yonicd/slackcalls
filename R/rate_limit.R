@@ -1,5 +1,16 @@
 rate_limit_set <- function(slack_method, rate_limit) {
-  if (is.null(rate_limit)) {
+  if (missing(rate_limit)) {
+    if (is.null(.slack$rate_limits[[slack_method]])) {
+      rate_limit <- rate_limits_known[rate_limits_known == slack_method]
+    } else {
+      # If it's already set and they didn't ask for a change, we're done.
+      return(NULL)
+    }
+  }
+
+  # At this point either they sent in rate_limit or we set it to something,
+  # possibly a length-0 integer. Treat that the same as NULL.
+  if (!length(rate_limit)) {
     .slack$rate_limits[[slack_method]] <- NULL
   } else {
     .slack$rate_limits[[slack_method]]$rate_limit <- rate_limit
@@ -27,10 +38,8 @@ rate_limit_drop_old_calls <- function(slack_method) {
 rate_limit_wait <- function(slack_method) {
   # I did this as a while to avoid any weird race-time conditions where we end
   # up waiting a fraction of a second less than we should or something.
-  while (
-    length(.slack$rate_limits[[slack_method]]$calls) >=
-    .slack$rate_limits[[slack_method]]$rate_limit
-  ) {
+  while (length(.slack$rate_limits[[slack_method]]$calls) >=
+         .slack$rate_limits[[slack_method]]$rate_limit) {
     # Wait until the first one was at least a minute ago.
     wait_seconds <- 60 - (
       as.integer(Sys.time()) - .slack$rate_limits[[slack_method]]$calls[[1]]

@@ -5,9 +5,9 @@ token <- Sys.getenv('SLACK_API_TOKEN')
 channel <- "CNTFB9215"
 
 # Uncomment this option if you'd like to test the rate limits. The rate limit
-# tests take at least 1 full minute.
+# tests take at least 5 seconds.
 
-options(slackverse_test_rate = TRUE)
+# options(slackverse_test_rate = TRUE)
 
 # With the current free-tier limits, posts disappear every 90 days. If tests
 # fail, check that there are >= 15 posts in the channel.
@@ -144,7 +144,7 @@ testthat::describe("rate limits work", {
         slack_method = "conversations.history",
         token = token,
         channel = channel,
-        max_results = 2,
+        max_results = 1,
         limit = 1,
         rate_limit = 1
       )
