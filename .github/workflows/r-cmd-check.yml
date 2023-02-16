@@ -52,7 +52,3 @@ jobs:
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
-
-      - name: covr
-        run: covr::package_coverage()
-        shell: Rscript {0}
