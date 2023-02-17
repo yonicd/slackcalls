@@ -1,0 +1,88 @@
+{
+    "ok": true,
+    "messages": [
+        {
+            "client_msg_id": "c87cd297-9673-452e-ac3b-165098d6d937",
+            "type": "message",
+            "text": "18",
+            "user": "U0111B8S0LX",
+            "ts": "1675440838.550749",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "2JLv",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "18"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "f0a7e054-0f17-480e-8234-9845d2573e15",
+            "type": "message",
+            "text": "17",
+            "user": "U0111B8S0LX",
+            "ts": "1675440838.038749",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "TLlTb",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "17"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "95a48370-c1f2-45dc-b93d-e4d6a7908f44",
+            "type": "message",
+            "text": "16",
+            "user": "U0111B8S0LX",
+            "ts": "1675440837.024009",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "NUvL",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "16"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        }
+    ],
+    "has_more": true,
+    "is_limited": false,
+    "pin_count": 0,
+    "channel_actions_ts": null,
+    "channel_actions_count": 0,
+    "response_metadata": {
+        "next_cursor": "bmV4dF90czoxNjc1NDQwODM2MzQyNzg5"
+    }
+}

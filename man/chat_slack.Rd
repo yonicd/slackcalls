@@ -8,7 +8,8 @@ chat_slack(
   slack_method = "chat.postMessage",
   token = Sys.getenv("SLACK_API_TOKEN"),
   ...,
-  action = c("push", "pop")
+  action = c("push", "pop"),
+  rate_limit
 )
 }
 \arguments{
@@ -19,6 +20,12 @@ chat_slack(
 \item{...}{arguments to pass to chat methods}
 
 \item{action}{action to apply on.exit to call stack, Default: c("push", "pop")}
+
+\item{rate_limit}{Integer. The maximum number of calls to make to this
+function per minute. If NULL, calls will not be rate-limited. If unset,
+calls will be limited per the rate limit guides in the \href{https://api.slack.com/methods}{Slack api method documentation}, if known. Note: If a limit
+is set for this method in any call in this session, that rate limit will be
+respected until rate_limit is set to NULL. Default: None.}
 }
 \value{
 httr response
@@ -38,7 +45,7 @@ For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
 \examples{
 \dontrun{
-post_slack(
+chat_slack(
   text = 'my message',
   channel = "general",
   token = "my_api_token"

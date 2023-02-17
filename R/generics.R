@@ -8,11 +8,16 @@
 #'   multiple of \code{limit}. Default: Inf
 #' @param max_calls Integer. The maximum number of separate API calls to make
 #'   while constructing the response. Default: Inf
-#' @param limit Integer. The number of results to fetch per call. Default:
-#'   1000L
+#' @param limit Integer. The number of results to fetch per call. Default: 1000L
 #' @param ... Additional arguments to pass to the body of the method call. Note:
 #'   if you pass an explicit \code{limit}, this may cause conflicts. We
 #'   recommend using \code{max_results} and \code{max_calls}.
+#' @param rate_limit Integer. The maximum number of calls to make to this
+#'   function per minute. If NULL, calls will not be rate-limited. If unset,
+#'   calls will be limited per the rate limit guides in the [Slack api method
+#'   documentation](https://api.slack.com/methods), if known. Note: If a limit
+#'   is set for this method in any call in this session, that rate limit will be
+#'   respected until rate_limit is set to NULL. Default: None.
 #' @return A list with an additional class corresponding to \code{slack_method}.
 #' @examples
 #' \dontrun{
@@ -29,18 +34,22 @@ post_slack <- function(slack_method,
                        max_results = Inf,
                        max_calls = Inf,
                        limit = 1000L,
-                       ...){
+                       ...,
+                       rate_limit) {
+  rate_limit_set(slack_method, rate_limit)
 
   body <- list(...)
-  body$token <- token
 
   # Deal with maxes and limits.
   body$limit <- min(limit, max_results)
 
-  res <- call_slack(slack_method, body = body)
+  res <- call_slack(slack_method, body = body, token = token)
 
-  if (max_calls > 1 & max_results > body$limit)
-    res <- paginate_(res, max_results = max_results, max_calls = max_calls)
+  if (max_calls > 1 & max_results > body$limit) {
+    res <- paginate_(
+      res, max_results = max_results, max_calls = max_calls, token = token
+    )
+  }
 
   res
 
@@ -52,6 +61,7 @@ post_slack <- function(slack_method,
 #' @param token Character. Your Slack API token.
 #' @param ... arguments to pass to chat methods
 #' @param action action to apply on.exit to call stack, Default: c("push", "pop")
+#' @inheritParams post_slack
 #' @return httr response
 #' @details
 #'  chat methods available to post to
@@ -62,7 +72,7 @@ post_slack <- function(slack_method,
 #' For a full list of chat methods see [here](https://api.slack.com/methods)
 #' @examples
 #' \dontrun{
-#' post_slack(
+#' chat_slack(
 #'   text = 'my message',
 #'   channel = "general",
 #'   token = "my_api_token"
@@ -70,13 +80,14 @@ post_slack <- function(slack_method,
 #' }
 #' @rdname chat_slack
 #' @export
-chat_slack <- function(slack_method = 'chat.postMessage',token = Sys.getenv('SLACK_API_TOKEN'),
-                       ..., action = c('push','pop')){
+chat_slack <- function(slack_method = 'chat.postMessage',
+                       token = Sys.getenv('SLACK_API_TOKEN'),
+                       ..., action = c('push','pop'), rate_limit) {
+  rate_limit_set(slack_method, rate_limit)
 
   body <- list(...)
-  body$token <- token
 
-  res <- call_slack(slack_method, body = body)
+  res <- call_slack(slack_method, body = body, token = token)
 
   action <- match.arg(action,c('push','pop'),several.ok = TRUE)
 
@@ -95,6 +106,7 @@ chat_slack <- function(slack_method = 'chat.postMessage',token = Sys.getenv('SLA
 #' @param slack_method character, method to invoke, Default: 'files.upload'
 #' @param token Character. Your Slack API token.
 #' @param ... arguments to pass to chat methods
+#' @inheritParams post_slack
 #' @return httr response
 #' @details
 #'  files methods available to post to
@@ -136,31 +148,47 @@ chat_slack <- function(slack_method = 'chat.postMessage',token = Sys.getenv('SLA
 #' }
 #' @rdname files_slack
 #' @export
-files_slack <- function(slack_method = 'files.upload',  ..., token = Sys.getenv('SLACK_API_TOKEN')){
-    body <- list(...)
-    body$token <- token
-    res <- validate_upload(slack_method = slack_method, body = body)
+files_slack <- function(slack_method = 'files.upload',
+                        ...,
+                        token = Sys.getenv('SLACK_API_TOKEN'),
+                        rate_limit) {
+  rate_limit_set(slack_method, rate_limit)
 
-    if(res$ok){
+  body <- list(...)
 
-      if(slack_method=='files.upload'){
-        file_push(res)
-      }
+  res <- validate_upload(
+    slack_method = slack_method, body = body, token = token
+  )
 
-      if(slack_method=='files.delete'){
-        file_pop()
-      }
+  if(res$ok){
 
+    if(slack_method=='files.upload'){
+      file_push(res)
     }
 
-    return(invisible(res))
+    if(slack_method=='files.delete'){
+      file_pop()
+    }
+
   }
 
+  return(invisible(res))
+}
+
 #' @importFrom httr POST
-call_slack <- function(slack_method, body) {
+call_slack <- function(slack_method, body, token = NULL) {
+
+  rate_limit_check(slack_method)
+
+  # Backward compatibility.
+  if (!is.null(body$token) && is.null(token)) {
+    token <- body$token
+    body$token <- NULL
+  }
 
   res <- httr::POST(
     url = file.path("https://slack.com/api", slack_method),
+    config = httr::add_headers(Authorization = paste("Bearer", token)),
     body = compact(body)
   )
 
@@ -221,24 +249,35 @@ validate_response <- function(res) {
 }
 
 #' @importFrom httr stop_for_status content POST upload_file add_headers
-validate_upload <- function(slack_method = 'files.upload', body) {
+validate_upload <- function(slack_method = 'files.upload', body, token = NULL) {
+  rate_limit_check(slack_method)
+
+  # Backward compatibility.
+  if (!is.null(body$token) && is.null(token)) {
+    token <- body$token
+    body$token <- NULL
+  }
 
   # fix common typo that user might make
-  if('channel'%in%names(body))
-    names(body)[names(body)=='channel'] <- 'channels'
+  if ('channel' %in% names(body))
+    names(body)[names(body) == 'channel'] <- 'channels'
 
-  if('file'%in%names(body)&slack_method=='files.upload'){
+  if ('file' %in% names(body) && slack_method == 'files.upload') {
 
     body$file <- httr::upload_file(body$file)
 
     res <- httr::POST(
       url = file.path("https://slack.com/api", slack_method),
-      httr::add_headers(`Content-Type`="multipart/form-data"),
+      config = httr::add_headers(
+        Authorization = paste("Bearer", token),
+        `Content-Type` = "multipart/form-data"
+      ),
       body = compact(body)
     )
-  }else{
+  } else{
     res <- httr::POST(
       url = file.path("https://slack.com/api", slack_method),
+      config = httr::add_headers(Authorization = paste("Bearer", token)),
       body = compact(body)
     )
   }
@@ -265,7 +304,7 @@ parse_call <- function() {
   gsub("\\_", ".", no_get)
 }
 
-paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
+paginate_ <- function(res, max_results = Inf, max_calls  = Inf, token = NULL) {
 
   if (is.null(attr(res, "cursor")) | max_calls == 1) { # nocov start
     return(res)
@@ -292,7 +331,7 @@ paginate_ <- function(res, max_results = Inf, max_calls  = Inf) {
     if (cont) {
       this_body <- attr(output[[i]], "body")
       this_body$cursor <- attr(output[[i]], "cursor")
-      this_res <- call_slack(slack_method, body = this_body)
+      this_res <- call_slack(slack_method, body = this_body, token = token)
 
       output <- append(output, list(this_res))
 

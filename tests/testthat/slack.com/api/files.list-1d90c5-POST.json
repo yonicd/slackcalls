@@ -1,0 +1,731 @@
+{
+    "ok": true,
+    "files": [
+        {
+            "id": "F020DMQ79QW",
+            "created": 1619809139,
+            "timestamp": 1619809139,
+            "name": "sessioninfo.R",
+            "title": "session info",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 4353,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F020DMQ79QW/sessioninfo.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F020DMQ79QW/download/sessioninfo.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F020DMQ79QW/sessioninfo.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F020DMQ79QW/sessioninfo.r/edit",
+            "preview": "--Session info----\r\n setting  value                       \r\n version  R version 4.0.5 (2021-03-31)\r\n os       Windows 10 x64              \r\n system   x86_64, mingw32             \r",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-operator\">--<\/span><span class=\"cm-variable\">Session<\/span> <span class=\"cm-variable\">info<\/span><span class=\"cm-operator\">----<\/span><\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">setting<\/span>  <span class=\"cm-variable\">value<\/span>                       <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">version<\/span>  <span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.0<\/span><span class=\"cm-number\">.5<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">03<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">31<\/span>)<\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">os<\/span>       <span class=\"cm-variable\">Windows<\/span> <span class=\"cm-number\">10<\/span> <span class=\"cm-variable\">x64<\/span>              <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">system<\/span>   <span class=\"cm-variable\">x86_64<\/span>, <span class=\"cm-variable\">mingw32<\/span>             <\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 68,
+            "lines_more": 63,
+            "preview_is_truncated": true,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F0205MW9LDV",
+            "created": 1619809168,
+            "timestamp": 1619809168,
+            "name": "sessioninfo.R",
+            "title": "session info",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 4428,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F0205MW9LDV/sessioninfo.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F0205MW9LDV/download/sessioninfo.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F0205MW9LDV/sessioninfo.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F0205MW9LDV/sessioninfo.r/edit",
+            "preview": "--Session info----\r\n setting  value                       \r\n version  R version 4.0.5 (2021-03-31)\r\n os       Windows 10 x64              \r\n system   x86_64, mingw32             \r",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-operator\">--<\/span><span class=\"cm-variable\">Session<\/span> <span class=\"cm-variable\">info<\/span><span class=\"cm-operator\">----<\/span><\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">setting<\/span>  <span class=\"cm-variable\">value<\/span>                       <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">version<\/span>  <span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.0<\/span><span class=\"cm-number\">.5<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">03<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">31<\/span>)<\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">os<\/span>       <span class=\"cm-variable\">Windows<\/span> <span class=\"cm-number\">10<\/span> <span class=\"cm-variable\">x64<\/span>              <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">system<\/span>   <span class=\"cm-variable\">x86_64<\/span>, <span class=\"cm-variable\">mingw32<\/span>             <\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 69,
+            "lines_more": 64,
+            "preview_is_truncated": true,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F020SMVUV9A",
+            "created": 1619810173,
+            "timestamp": 1619810173,
+            "name": "sessioninfo.R",
+            "title": "session info",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 5114,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F020SMVUV9A/sessioninfo.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F020SMVUV9A/download/sessioninfo.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F020SMVUV9A/sessioninfo.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F020SMVUV9A/sessioninfo.r/edit",
+            "preview": "--Session info----\r\n setting  value                       \r\n version  R version 4.0.5 (2021-03-31)\r\n os       Windows 10 x64              \r\n system   x86_64, mingw32             \r",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-operator\">--<\/span><span class=\"cm-variable\">Session<\/span> <span class=\"cm-variable\">info<\/span><span class=\"cm-operator\">----<\/span><\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">setting<\/span>  <span class=\"cm-variable\">value<\/span>                       <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">version<\/span>  <span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.0<\/span><span class=\"cm-number\">.5<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">03<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">31<\/span>)<\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">os<\/span>       <span class=\"cm-variable\">Windows<\/span> <span class=\"cm-number\">10<\/span> <span class=\"cm-variable\">x64<\/span>              <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">system<\/span>   <span class=\"cm-variable\">x86_64<\/span>, <span class=\"cm-variable\">mingw32<\/span>             <\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 78,
+            "lines_more": 73,
+            "preview_is_truncated": true,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F020U1YJ99S",
+            "created": 1619882095,
+            "timestamp": 1619882095,
+            "name": "sessioninfo.R",
+            "title": "session info",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 6563,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F020U1YJ99S/sessioninfo.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F020U1YJ99S/download/sessioninfo.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F020U1YJ99S/sessioninfo.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F020U1YJ99S/sessioninfo.r/edit",
+            "preview": "--Session info----\r\n setting  value                       \r\n version  R version 4.0.5 (2021-03-31)\r\n os       Windows 10 x64              \r\n system   x86_64, mingw32             \r",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-operator\">--<\/span><span class=\"cm-variable\">Session<\/span> <span class=\"cm-variable\">info<\/span><span class=\"cm-operator\">----<\/span><\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">setting<\/span>  <span class=\"cm-variable\">value<\/span>                       <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">version<\/span>  <span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.0<\/span><span class=\"cm-number\">.5<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">03<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">31<\/span>)<\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">os<\/span>       <span class=\"cm-variable\">Windows<\/span> <span class=\"cm-number\">10<\/span> <span class=\"cm-variable\">x64<\/span>              <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">system<\/span>   <span class=\"cm-variable\">x86_64<\/span>, <span class=\"cm-variable\">mingw32<\/span>             <\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 88,
+            "lines_more": 83,
+            "preview_is_truncated": true,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F020F4CEUKY",
+            "created": 1619883622,
+            "timestamp": 1619883622,
+            "name": "sessioninfo.R",
+            "title": "session info",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 5114,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F020F4CEUKY/sessioninfo.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F020F4CEUKY/download/sessioninfo.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F020F4CEUKY/sessioninfo.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F020F4CEUKY/sessioninfo.r/edit",
+            "preview": "--Session info----\r\n setting  value                       \r\n version  R version 4.0.5 (2021-03-31)\r\n os       Windows 10 x64              \r\n system   x86_64, mingw32             \r",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-operator\">--<\/span><span class=\"cm-variable\">Session<\/span> <span class=\"cm-variable\">info<\/span><span class=\"cm-operator\">----<\/span><\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">setting<\/span>  <span class=\"cm-variable\">value<\/span>                       <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">version<\/span>  <span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.0<\/span><span class=\"cm-number\">.5<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">03<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">31<\/span>)<\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">os<\/span>       <span class=\"cm-variable\">Windows<\/span> <span class=\"cm-number\">10<\/span> <span class=\"cm-variable\">x64<\/span>              <\/pre><\/div>\n<div><pre> <span class=\"cm-variable\">system<\/span>   <span class=\"cm-variable\">x86_64<\/span>, <span class=\"cm-variable\">mingw32<\/span>             <\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 78,
+            "lines_more": 73,
+            "preview_is_truncated": true,
+            "channels": [
+                "CNRKL1H6C"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F03HS94RM4H",
+            "created": 1653767154,
+            "timestamp": 1653767154,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 13,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": false,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F03HS94RM4H/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F03HS94RM4H/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F03HS94RM4H/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F03HS94RM4H/-.txt/edit",
+            "preview": "Anything else",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Anything else<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F03HS9637EV",
+            "created": 1653767238,
+            "timestamp": 1653767238,
+            "name": "sessionInfo.R.r",
+            "title": "R sessionInfo",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "UNTFB8LTH",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 1268,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F03HS9637EV/sessioninfo.r.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F03HS9637EV/download/sessioninfo.r.r",
+            "permalink": "https://slackr-test.slack.com/files/UNTFB8LTH/F03HS9637EV/sessioninfo.r.r",
+            "edit_link": "https://slackr-test.slack.com/files/UNTFB8LTH/F03HS9637EV/sessioninfo.r.r/edit",
+            "preview": "R version 4.1.0 (2021-05-18)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur 11.6\n\nMatrix products: default",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.1<\/span><span class=\"cm-number\">.0<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">05<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">18<\/span>)<\/pre><\/div>\n<div><pre><span class=\"cm-variable\">Platform<\/span><span class=\"cm-operator\">:<\/span> <span class=\"cm-variable\">x86_64<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-variable\">apple<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-variable\">darwin17.0<\/span> (<span class=\"cm-number\">64<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-variable\">bit<\/span>)<\/pre><\/div>\n<div><pre><span class=\"cm-variable\">Running<\/span> <span class=\"cm-variable\">under<\/span><span class=\"cm-operator\">:<\/span> <span class=\"cm-variable\">macOS<\/span> <span class=\"cm-variable\">Big<\/span> <span class=\"cm-variable\">Sur<\/span> <span class=\"cm-number\">11.6<\/span><\/pre><\/div>\n<div><pre>&#8203;<\/pre><\/div>\n<div><pre><span class=\"cm-variable\">Matrix<\/span> <span class=\"cm-variable\">products<\/span><span class=\"cm-operator\">:<\/span> <span class=\"cm-variable\">default<\/span><\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 28,
+            "lines_more": 23,
+            "preview_is_truncated": true,
+            "channels": [
+                "CNRKL1H6C"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F03J3D6EEQG",
+            "created": 1653767255,
+            "timestamp": 1653767255,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F03J3D6EEQG/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F03J3D6EEQG/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F03J3D6EEQG/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F03J3D6EEQG/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+                "CNTFB9215"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F03J3D6P1UY",
+            "created": 1653767276,
+            "timestamp": 1653767276,
+            "name": "sessionInfo.R.r",
+            "title": "R sessionInfo",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "UNTFB8LTH",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 1268,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F03J3D6P1UY/sessioninfo.r.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F03J3D6P1UY/download/sessioninfo.r.r",
+            "permalink": "https://slackr-test.slack.com/files/UNTFB8LTH/F03J3D6P1UY/sessioninfo.r.r",
+            "edit_link": "https://slackr-test.slack.com/files/UNTFB8LTH/F03J3D6P1UY/sessioninfo.r.r/edit",
+            "preview": "R version 4.1.0 (2021-05-18)\nPlatform: x86_64-apple-darwin17.0 (64-bit)\nRunning under: macOS Big Sur 11.6\n\nMatrix products: default",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">R<\/span> <span class=\"cm-variable\">version<\/span> <span class=\"cm-number\">4.1<\/span><span class=\"cm-number\">.0<\/span> (<span class=\"cm-number\">2021<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">05<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-number\">18<\/span>)<\/pre><\/div>\n<div><pre><span class=\"cm-variable\">Platform<\/span><span class=\"cm-operator\">:<\/span> <span class=\"cm-variable\">x86_64<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-variable\">apple<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-variable\">darwin17.0<\/span> (<span class=\"cm-number\">64<\/span><span class=\"cm-operator\">-<\/span><span class=\"cm-variable\">bit<\/span>)<\/pre><\/div>\n<div><pre><span class=\"cm-variable\">Running<\/span> <span class=\"cm-variable\">under<\/span><span class=\"cm-operator\">:<\/span> <span class=\"cm-variable\">macOS<\/span> <span class=\"cm-variable\">Big<\/span> <span class=\"cm-variable\">Sur<\/span> <span class=\"cm-number\">11.6<\/span><\/pre><\/div>\n<div><pre>&#8203;<\/pre><\/div>\n<div><pre><span class=\"cm-variable\">Matrix<\/span> <span class=\"cm-variable\">products<\/span><span class=\"cm-operator\">:<\/span> <span class=\"cm-variable\">default<\/span><\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 28,
+            "lines_more": 23,
+            "preview_is_truncated": true,
+            "channels": [
+                "CNTFB9215"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04QE3HDZ0R",
+            "created": 1676587539,
+            "timestamp": 1676587539,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04QE3HDZ0R/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04QE3HDZ0R/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QE3HDZ0R/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QE3HDZ0R/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04PUTBN6HL",
+            "created": 1676588221,
+            "timestamp": 1676588221,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04PUTBN6HL/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04PUTBN6HL/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PUTBN6HL/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PUTBN6HL/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04QR6GH08Y",
+            "created": 1676588223,
+            "timestamp": 1676588223,
+            "name": "file3aa4244e7dac.R",
+            "title": "file3aa4244e7dac",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 8,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04QR6GH08Y/file3aa4244e7dac.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04QR6GH08Y/download/file3aa4244e7dac.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QR6GH08Y/file3aa4244e7dac.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QR6GH08Y/file3aa4244e7dac.r/edit",
+            "preview": "x <- 2\r\n",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">x<\/span> <span class=\"cm-operator cm-arrow\">&lt;-<\/span> <span class=\"cm-number\">2<\/span><\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 2,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04QR6KRVLY",
+            "created": 1676588272,
+            "timestamp": 1676588272,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04QR6KRVLY/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04QR6KRVLY/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QR6KRVLY/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QR6KRVLY/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04PM1WGX5M",
+            "created": 1676589194,
+            "timestamp": 1676589194,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04PM1WGX5M/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04PM1WGX5M/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PM1WGX5M/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PM1WGX5M/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04Q1HUQTDY",
+            "created": 1676589338,
+            "timestamp": 1676589338,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q1HUQTDY/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q1HUQTDY/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q1HUQTDY/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q1HUQTDY/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04PV13JCUW",
+            "created": 1676589830,
+            "timestamp": 1676589830,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04PV13JCUW/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04PV13JCUW/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PV13JCUW/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PV13JCUW/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04PM38BR47",
+            "created": 1676589962,
+            "timestamp": 1676589962,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 16,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04PM38BR47/-.txt",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04PM38BR47/download/-.txt",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PM38BR47/-.txt",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04PM38BR47/-.txt/edit",
+            "preview": "a sample payload",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 1,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        {
+            "id": "F04Q7372FPD",
+            "created": 1676665727,
+            "timestamp": 1676665727,
+            "name": "file14a41122cfc.R",
+            "title": "file14a41122cfc",
+            "mimetype": "text/plain",
+            "filetype": "r",
+            "pretty_type": "R",
+            "user": "U0111B8S0LX",
+            "user_team": "TNE5M7UGK",
+            "editable": true,
+            "size": 8,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q7372FPD/file14a41122cfc.r",
+            "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q7372FPD/download/file14a41122cfc.r",
+            "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q7372FPD/file14a41122cfc.r",
+            "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q7372FPD/file14a41122cfc.r/edit",
+            "preview": "x <- 2\r\n",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">x<\/span> <span class=\"cm-operator cm-arrow\">&lt;-<\/span> <span class=\"cm-number\">2<\/span><\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 2,
+            "lines_more": 0,
+            "preview_is_truncated": false,
+            "channels": [
+                "CNTFB9215"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        }
+    ],
+    "paging": {
+        "count": 100,
+        "total": 18,
+        "page": 1,
+        "pages": 1
+    }
+}
