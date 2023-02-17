@@ -46,28 +46,25 @@ jobs:
           needs: check
 
       - name: slackteams trigger
-        if: github.ref == 'refs/heads/master'
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@main
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{secrets.GH_PAT}}
           repository: yonicd/slackteams
           event-type: push
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
       - name: slackthreads trigger
-        if: github.ref == 'refs/heads/master'
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@main
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{secrets.GH_PAT}}
           repository: yonicd/slackthreads
           event-type: push
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
       - name: slackposts trigger
-        if: github.ref == 'refs/heads/master'
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@main
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{secrets.GH_PAT}}
           repository: yonicd/slackposts
           event-type: push
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
