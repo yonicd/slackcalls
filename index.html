@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,38 +33,20 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">slackcalls</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.6</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.7</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="articles/tests_and_coverage.html">Tests and Coverage</a>
-    </li>
-  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/yonicd/slackcalls/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/yonicd/slackcalls/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -80,107 +64,114 @@
   <div class="contents col-md-9">
 
 
-<div id="slackcalls" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#slackcalls" class="anchor"></a>slackcalls</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="slackcalls">slackcalls<a class="anchor" aria-label="anchor" href="#slackcalls"></a>
+</h1></div>
 <p><code>slackcalls</code> is a part of <code>slackverse</code></p>
-<table class="table"><tbody>
+<table class="table">
+<colgroup>
+<col width="34%">
+<col width="32%">
+<col width="33%">
+</colgroup>
+<tbody>
 <tr class="odd">
 <td align="center"></td>
-<td align="center">slackcalls<br><a href="https://github.com/yonicd/slackcalls"><img src="https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg"></a>
+<td align="center">slackcalls<br><a href="https://github.com/yonicd/slackcalls" class="external-link"><img src="https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg"></a>
 </td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center">slackthreads<br><a href="https://github.com/yonicd/slackthreads"><img src="https://github.com/yonicd/slackthreads/workflows/R-mac/badge.svg"></a>
+<td align="center">slackthreads<br><a href="https://github.com/yonicd/slackthreads" class="external-link"><img src="https://github.com/yonicd/slackthreads/workflows/R-mac/badge.svg"></a>
 </td>
-<td align="center">slackteams<br><a href="https://github.com/yonicd/slackteams"><img src="https://github.com/yonicd/slackteams/workflows/R-mac/badge.svg"></a>
+<td align="center">slackteams<br><a href="https://github.com/yonicd/slackteams" class="external-link"><img src="https://github.com/yonicd/slackteams/workflows/R-mac/badge.svg"></a>
 </td>
-<td align="center">slackposts<br><a href="https://github.com/yonicd/slackposts"><img src="https://github.com/yonicd/slackposts/workflows/R-mac/badge.svg"></a>
+<td align="center">slackposts<br><a href="https://github.com/yonicd/slackposts" class="external-link"><img src="https://github.com/yonicd/slackposts/workflows/R-mac/badge.svg"></a>
 </td>
 </tr>
 <tr class="odd">
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">slackblocks<br><a href="https://github.com/yonicd/slackblocks"><img src="https://github.com/yonicd/slackblocks/workflows/R-mac/badge.svg"></a>
+<td align="center">slackblocks<br><a href="https://github.com/yonicd/slackblocks" class="external-link"><img src="https://github.com/yonicd/slackblocks/workflows/R-mac/badge.svg"></a>
 </td>
 </tr>
 <tr class="even">
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">slackreprex<br><a href="https://github.com/yonicd/slackreprex"><img src="https://github.com/yonicd/slackreprex/workflows/R-mac/badge.svg"></a>
+<td align="center">slackreprex<br><a href="https://github.com/yonicd/slackreprex" class="external-link"><img src="https://github.com/yonicd/slackreprex/workflows/R-mac/badge.svg"></a>
 </td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><code>slackcalls</code> is the backend of <code>slackverse</code> it interacts with Slack API methods</p>
 <ul>
 <li><a href="#posting-to-slack">Posting</a></li>
 <li><a href="#querying-slack">Querying</a></li>
 <li><a href="#storage">Storage</a></li>
 </ul>
-<div id="posting-to-slack" class="section level2">
-<h2 class="hasAnchor">
-<a href="#posting-to-slack" class="anchor"></a>Posting to Slack</h2>
-<div id="files" class="section level3">
-<h3 class="hasAnchor">
-<a href="#files" class="anchor"></a>Files</h3>
+<div class="section level2">
+<h2 id="posting-to-slack">Posting to Slack<a class="anchor" aria-label="anchor" href="#posting-to-slack"></a>
+</h2>
+<div class="section level3">
+<h3 id="files">Files<a class="anchor" aria-label="anchor" href="#files"></a>
+</h3>
 <p>Using <code>files_slack</code> interact with</p>
 <ul>
-<li><a href="https://api.slack.com/methods/files.upload">files.upload</a></li>
-<li><a href="https://api.slack.com/methods/files.delete">files.delete</a></li>
-<li><a href="https://api.slack.com/methods/files.info">files.info</a></li>
-<li><a href="https://api.slack.com/methods/files.list">files.list</a></li>
+<li><a href="https://api.slack.com/methods/files.upload" class="external-link">files.upload</a></li>
+<li><a href="https://api.slack.com/methods/files.delete" class="external-link">files.delete</a></li>
+<li><a href="https://api.slack.com/methods/files.info" class="external-link">files.info</a></li>
+<li><a href="https://api.slack.com/methods/files.list" class="external-link">files.list</a></li>
 </ul>
 </div>
-<div id="chats" class="section level3">
-<h3 class="hasAnchor">
-<a href="#chats" class="anchor"></a>Chats</h3>
+<div class="section level3">
+<h3 id="chats">Chats<a class="anchor" aria-label="anchor" href="#chats"></a>
+</h3>
 <p>Using <code>chat_slack</code> interact with</p>
 <ul>
-<li><a href="https://api.slack.com/methods/chat.postMessage">chat.postMessage</a></li>
-<li><a href="https://api.slack.com/methods/chat.delete">chat.delete</a></li>
-<li><a href="https://api.slack.com/methods/chat.update">chat.update</a></li>
+<li><a href="https://api.slack.com/methods/chat.postMessage" class="external-link">chat.postMessage</a></li>
+<li><a href="https://api.slack.com/methods/chat.delete" class="external-link">chat.delete</a></li>
+<li><a href="https://api.slack.com/methods/chat.update" class="external-link">chat.update</a></li>
 </ul>
 </div>
 </div>
-<div id="querying-slack" class="section level2">
-<h2 class="hasAnchor">
-<a href="#querying-slack" class="anchor"></a>Querying Slack</h2>
+<div class="section level2">
+<h2 id="querying-slack">Querying Slack<a class="anchor" aria-label="anchor" href="#querying-slack"></a>
+</h2>
 <p>Using <code>post_slack</code> you can query the API to get information such as the following lists. The functions paginate by default.</p>
-<div id="team" class="section level3">
-<h3 class="hasAnchor">
-<a href="#team" class="anchor"></a>Team</h3>
+<div class="section level3">
+<h3 id="team">Team<a class="anchor" aria-label="anchor" href="#team"></a>
+</h3>
 <ul>
-<li><a href="https://api.slack.com/methods/team.info">team.info</a></li>
+<li><a href="https://api.slack.com/methods/team.info" class="external-link">team.info</a></li>
 </ul>
 </div>
-<div id="users" class="section level3">
-<h3 class="hasAnchor">
-<a href="#users" class="anchor"></a>Users</h3>
+<div class="section level3">
+<h3 id="users">Users<a class="anchor" aria-label="anchor" href="#users"></a>
+</h3>
 <ul>
-<li><a href="https://api.slack.com/methods/users.list">users.list</a></li>
-<li><a href="https://api.slack.com/methods/users.info">users.info</a></li>
+<li><a href="https://api.slack.com/methods/users.list" class="external-link">users.list</a></li>
+<li><a href="https://api.slack.com/methods/users.info" class="external-link">users.info</a></li>
 </ul>
 </div>
-<div id="conversations" class="section level3">
-<h3 class="hasAnchor">
-<a href="#conversations" class="anchor"></a>Conversations</h3>
+<div class="section level3">
+<h3 id="conversations">Conversations<a class="anchor" aria-label="anchor" href="#conversations"></a>
+</h3>
 <ul>
-<li><a href="https://api.slack.com/methods/conversations.history">conversations.history</a></li>
-<li><a href="https://api.slack.com/methods/conversations.list">conversations.list</a></li>
-<li><a href="https://api.slack.com/methods/conversations.info">conversations.info</a></li>
-<li><a href="https://api.slack.com/methods/conversations.members">conversations.members</a></li>
-<li><a href="https://api.slack.com/methods/conversations.replies">conversations.replies</a></li>
+<li><a href="https://api.slack.com/methods/conversations.history" class="external-link">conversations.history</a></li>
+<li><a href="https://api.slack.com/methods/conversations.list" class="external-link">conversations.list</a></li>
+<li><a href="https://api.slack.com/methods/conversations.info" class="external-link">conversations.info</a></li>
+<li><a href="https://api.slack.com/methods/conversations.members" class="external-link">conversations.members</a></li>
+<li><a href="https://api.slack.com/methods/conversations.replies" class="external-link">conversations.replies</a></li>
 </ul>
 </div>
 </div>
-<div id="storage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#storage" class="anchor"></a>Storage</h2>
+<div class="section level2">
+<h2 id="storage">Storage<a class="anchor" aria-label="anchor" href="#storage"></a>
+</h2>
 <p><code>slackcalls</code> also saves internally posts that you make during a session in order to use the information for posting to a thread or deleting posts. This mechanism is used in all the slackverse packages.</p>
-<div id="stacks" class="section level3">
-<h3 class="hasAnchor">
-<a href="#stacks" class="anchor"></a>Stacks</h3>
+<div class="section level3">
+<h3 id="stacks">Stacks<a class="anchor" aria-label="anchor" href="#stacks"></a>
+</h3>
 <ul>
 <li>
 <code>file_stack</code>: vector of file IDs that have been sent</li>
@@ -189,9 +180,9 @@
 </ul>
 <p>The stacks are updated every time a new post/file is sent or deleted.</p>
 </div>
-<div id="last-element" class="section level3">
-<h3 class="hasAnchor">
-<a href="#last-element" class="anchor"></a>Last Element</h3>
+<div class="section level3">
+<h3 id="last-element">Last Element<a class="anchor" aria-label="anchor" href="#last-element"></a>
+</h3>
 <p>using <code>file_last</code> and <code>post_last</code> you can fetch the head of each stack.</p>
 </div>
 </div>
@@ -201,50 +192,61 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/yonicd/slackcalls/">https://​github.com/​yonicd/​slackcalls/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/yonicd/slackcalls/issues">https://​github.com/​yonicd/​slackcalls/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>Jonathan Sidi <br><small class="roles"> Maintainer, author </small> <a href="https://orcid.org/0000-0002-4222-1819" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Jon Harmon <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0003-4781-4346" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="https://github.com/yonicd/slackcalls/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/yonicd/slackcalls/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
-<li><a href="http://tinyurl.com/ux5kpl9"><img src="https://img.shields.io/badge/covrpage-Last_Build_2020_09_12-brightgreen.svg" alt="Covrpage Summary"></a></li>
-<li><a href="https://github.com/yonicd/slackcalls"><img src="https://github.com/yonicd/slackcalls/workflows/R-win/badge.svg" alt="R-win build status"></a></li>
-<li><a href="https://github.com/yonicd/slackcalls"><img src="https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg" alt="R-mac build status"></a></li>
-<li><a href="https://github.com/yonicd/slackcalls"><img src="https://github.com/yonicd/slackcalls/workflows/R-linux/badge.svg" alt="R-linux build status"></a></li>
-<li><a href="https://codecov.io/gh/yonicd/slackcalls?branch=master"><img src="https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="LICENSE.html">Full license</a></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing slackcalls</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Jonathan Sidi <br><small class="roles"> Maintainer, author </small> <a href="https://orcid.org/0000-0002-4222-1819" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Jon Harmon <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0003-4781-4346" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="http://tinyurl.com/ux5kpl9" class="external-link"><img src="https://img.shields.io/badge/covrpage-Last_Build_2020_01_26-brightgreen.svg" alt="Covrpage Summary"></a></li>
+<li><a href="https://github.com/yonicd/slackcalls" class="external-link"><img src="https://github.com/yonicd/slackcalls/workflows/R-win/badge.svg" alt="R-win build status"></a></li>
+<li><a href="https://github.com/yonicd/slackcalls" class="external-link"><img src="https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg" alt="R-mac build status"></a></li>
+<li><a href="https://github.com/yonicd/slackcalls" class="external-link"><img src="https://github.com/yonicd/slackcalls/workflows/R-linux/badge.svg" alt="R-linux build status"></a></li>
+<li><a href="https://codecov.io/gh/yonicd/slackcalls?branch=master" class="external-link"><img src="https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Jonathan Sidi, Jon Harmon.</p>
+  <p></p>
+<p>Developed by Jonathan Sidi, Jon Harmon.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -252,6 +254,8 @@
 
   
 
+
+  
 
   </body>
 </html>
