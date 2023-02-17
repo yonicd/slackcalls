@@ -47,21 +47,13 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
-      - name: Install shield dependencies
-        run: |
-          install.packages('remotes')
-          remotes::install_github('yonicd/shield')
-          shield::install_remotes(shield::create_map())
-          remotes::install_local(force = TRUE, upgrade = TRUE)
-        shell: Rscript {0}
-
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
 
       - name: slackteams trigger
         if: github.ref == 'refs/heads/master'
-        uses: peter-evans/repository-dispatch@v1.0.0
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           repository: yonicd/slackteams
@@ -70,7 +62,7 @@ jobs:
 
       - name: slackthreads trigger
         if: github.ref == 'refs/heads/master'
-        uses: peter-evans/repository-dispatch@v1.0.0
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           repository: yonicd/slackthreads
@@ -79,7 +71,7 @@ jobs:
 
       - name: slackposts trigger
         if: github.ref == 'refs/heads/master'
-        uses: peter-evans/repository-dispatch@v1.0.0
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           repository: yonicd/slackposts
