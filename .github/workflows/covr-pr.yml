@@ -22,6 +22,7 @@ jobs:
       SLACK_SKIPLOAD: true
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       SLACK_API_TEST_MODE: false
+      SLACKVERSE_TEST_RATE: true
 
     steps:
       - uses: actions/checkout@main

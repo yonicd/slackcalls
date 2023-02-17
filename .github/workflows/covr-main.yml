@@ -23,6 +23,7 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       SLACK_API_TEST_MODE: true
+      SLACKVERSE_TEST_RATE: true
 
     steps:
       - uses: actions/checkout@main
