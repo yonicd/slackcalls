@@ -1,0 +1,65 @@
+{
+    "ok": true,
+    "file": {
+        "id": "F04QWTSEV4Y",
+        "created": 1676666032,
+        "timestamp": 1676666032,
+        "name": "-.txt",
+        "title": "Untitled",
+        "mimetype": "text/plain",
+        "filetype": "text",
+        "pretty_type": "Plain Text",
+        "user": "U0111B8S0LX",
+        "user_team": "TNE5M7UGK",
+        "editable": true,
+        "size": 16,
+        "mode": "snippet",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04QWTSEV4Y/-.txt",
+        "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04QWTSEV4Y/download/-.txt",
+        "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QWTSEV4Y/-.txt",
+        "permalink_public": "https://slack-files.com/TNE5M7UGK-F04QWTSEV4Y-de8c50ce08",
+        "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04QWTSEV4Y/-.txt/edit",
+        "preview": "a sample payload",
+        "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>a sample payload<\/pre><\/div>\n<\/div>\n<\/div>\n",
+        "lines": 1,
+        "lines_more": 0,
+        "preview_is_truncated": false,
+        "comments_count": 0,
+        "is_starred": false,
+        "shares": {
+            "public": {
+                "CNTFB9215": [
+                    {
+                        "reply_users": [
+
+                        ],
+                        "reply_users_count": 0,
+                        "reply_count": 0,
+                        "ts": "1676666032.948429",
+                        "channel_name": "slack-r",
+                        "team_id": "TNE5M7UGK",
+                        "share_user_id": "U0111B8S0LX"
+                    }
+                ]
+            }
+        },
+        "channels": [
+            "CNTFB9215"
+        ],
+        "groups": [
+
+        ],
+        "ims": [
+
+        ],
+        "has_more_shares": false,
+        "has_rich_preview": false,
+        "file_access": "visible"
+    }
+}

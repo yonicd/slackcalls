@@ -1,0 +1,57 @@
+{
+    "ok": true,
+    "messages": [
+        {
+            "type": "message",
+            "text": "",
+            "files": [
+                {
+                    "id": "F04Q7372FPD",
+                    "created": 1676665727,
+                    "timestamp": 1676665727,
+                    "name": "file14a41122cfc.R",
+                    "title": "file14a41122cfc",
+                    "mimetype": "text/plain",
+                    "filetype": "r",
+                    "pretty_type": "R",
+                    "user": "U0111B8S0LX",
+                    "user_team": "TNE5M7UGK",
+                    "editable": true,
+                    "size": 8,
+                    "mode": "snippet",
+                    "is_external": false,
+                    "external_type": "",
+                    "is_public": true,
+                    "public_url_shared": false,
+                    "display_as_bot": false,
+                    "username": "",
+                    "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q7372FPD/file14a41122cfc.r",
+                    "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q7372FPD/download/file14a41122cfc.r",
+                    "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q7372FPD/file14a41122cfc.r",
+                    "permalink_public": "https://slack-files.com/TNE5M7UGK-F04Q7372FPD-8707a31e43",
+                    "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q7372FPD/file14a41122cfc.r/edit",
+                    "preview": "x <- 2\r\n",
+                    "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">x<\/span> <span class=\"cm-operator cm-arrow\">&lt;-<\/span> <span class=\"cm-number\">2<\/span><\/pre><\/div>\n<\/div>\n<\/div>\n",
+                    "lines": 2,
+                    "lines_more": 0,
+                    "preview_is_truncated": false,
+                    "is_starred": false,
+                    "has_rich_preview": false,
+                    "file_access": "visible"
+                }
+            ],
+            "upload": true,
+            "user": "U0111B8S0LX",
+            "display_as_bot": false,
+            "ts": "1676665737.213609"
+        }
+    ],
+    "has_more": true,
+    "is_limited": false,
+    "pin_count": 0,
+    "channel_actions_ts": null,
+    "channel_actions_count": 0,
+    "response_metadata": {
+        "next_cursor": "bmV4dF90czoxNjc1NDQwODM5OTU5Mjg5"
+    }
+}

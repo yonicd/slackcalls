@@ -46,7 +46,7 @@ rate_limit_wait <- function(slack_method) {
     # Wait until the first one was at least a minute ago.
     wait_seconds <- 60L - (
       as.integer(Sys.time()) - .slack$rate_limits[[slack_method]]$calls[[1]]
-    )
+    ) + 1L
     wait_seconds <- max(wait_seconds, 1L)
     Sys.sleep(wait_seconds)
 
@@ -65,6 +65,10 @@ rate_limit_append_ts <- function(slack_method, ts) {
     .slack$rate_limits[[slack_method]]$calls,
     ts
   )
+}
+
+rate_limit_reset_calls <- function(slack_method) {
+  .slack$rate_limits[[slack_method]]$calls <- NULL
 }
 
 see_env <- function() {

@@ -1,0 +1,564 @@
+{
+    "ok": true,
+    "messages": [
+        {
+            "type": "message",
+            "text": "",
+            "files": [
+                {
+                    "id": "F04Q7372FPD",
+                    "created": 1676665727,
+                    "timestamp": 1676665727,
+                    "name": "file14a41122cfc.R",
+                    "title": "file14a41122cfc",
+                    "mimetype": "text/plain",
+                    "filetype": "r",
+                    "pretty_type": "R",
+                    "user": "U0111B8S0LX",
+                    "user_team": "TNE5M7UGK",
+                    "editable": true,
+                    "size": 8,
+                    "mode": "snippet",
+                    "is_external": false,
+                    "external_type": "",
+                    "is_public": true,
+                    "public_url_shared": false,
+                    "display_as_bot": false,
+                    "username": "",
+                    "url_private": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q7372FPD/file14a41122cfc.r",
+                    "url_private_download": "https://files.slack.com/files-pri/TNE5M7UGK-F04Q7372FPD/download/file14a41122cfc.r",
+                    "permalink": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q7372FPD/file14a41122cfc.r",
+                    "permalink_public": "https://slack-files.com/TNE5M7UGK-F04Q7372FPD-8707a31e43",
+                    "edit_link": "https://slackr-test.slack.com/files/U0111B8S0LX/F04Q7372FPD/file14a41122cfc.r/edit",
+                    "preview": "x <- 2\r\n",
+                    "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">x<\/span> <span class=\"cm-operator cm-arrow\">&lt;-<\/span> <span class=\"cm-number\">2<\/span><\/pre><\/div>\n<\/div>\n<\/div>\n",
+                    "lines": 2,
+                    "lines_more": 0,
+                    "preview_is_truncated": false,
+                    "is_starred": false,
+                    "has_rich_preview": false,
+                    "file_access": "visible"
+                }
+            ],
+            "upload": true,
+            "user": "U0111B8S0LX",
+            "display_as_bot": false,
+            "ts": "1676665737.213609"
+        },
+        {
+            "client_msg_id": "0de86a4a-e1eb-49a1-9e2c-f92c2ffe5b59",
+            "type": "message",
+            "text": "20",
+            "user": "U0111B8S0LX",
+            "ts": "1675440839.959289",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "lgH0z",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "20"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK",
+            "thread_ts": "1675440839.959289",
+            "reply_count": 1,
+            "reply_users_count": 1,
+            "latest_reply": "1676499385.066699",
+            "reply_users": [
+                "U0111B8S0LX"
+            ],
+            "is_locked": false,
+            "subscribed": true,
+            "last_read": "1676499385.066699"
+        },
+        {
+            "client_msg_id": "75116a07-b7bf-449f-9570-0da9b96c0819",
+            "type": "message",
+            "text": "19",
+            "user": "U0111B8S0LX",
+            "ts": "1675440839.190749",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "mNt",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "19"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "c87cd297-9673-452e-ac3b-165098d6d937",
+            "type": "message",
+            "text": "18",
+            "user": "U0111B8S0LX",
+            "ts": "1675440838.550749",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "2JLv",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "18"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "f0a7e054-0f17-480e-8234-9845d2573e15",
+            "type": "message",
+            "text": "17",
+            "user": "U0111B8S0LX",
+            "ts": "1675440838.038749",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "TLlTb",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "17"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "95a48370-c1f2-45dc-b93d-e4d6a7908f44",
+            "type": "message",
+            "text": "16",
+            "user": "U0111B8S0LX",
+            "ts": "1675440837.024009",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "NUvL",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "16"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "dd333b18-5d5f-4b5c-b888-dc320d696dad",
+            "type": "message",
+            "text": "15",
+            "user": "U0111B8S0LX",
+            "ts": "1675440836.342789",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "rXX",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "15"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "870b0673-4fd9-4b56-b68f-ba7eac2f4557",
+            "type": "message",
+            "text": "14",
+            "user": "U0111B8S0LX",
+            "ts": "1675440835.675059",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "knQiR",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "14"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "9e53f98f-6e1c-4688-98e5-aefc8f909a14",
+            "type": "message",
+            "text": "13",
+            "user": "U0111B8S0LX",
+            "ts": "1675440834.996229",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "Zo9/",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "13"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "0cbc78d3-47d5-47b2-8188-6debd80387e2",
+            "type": "message",
+            "text": "12",
+            "user": "U0111B8S0LX",
+            "ts": "1675440834.318279",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "11bH1",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "12"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "ab0043f6-2fff-4988-bdd8-d286f61ef12c",
+            "type": "message",
+            "text": "11",
+            "user": "U0111B8S0LX",
+            "ts": "1675440833.508939",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "XOi",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "11"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "e5602460-859a-4e8a-b09f-94abcbf7f24f",
+            "type": "message",
+            "text": "10",
+            "user": "U0111B8S0LX",
+            "ts": "1675440831.582309",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "hCldz",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "10"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "ddfdbbde-3f29-44f2-9fd8-96bebc2fbef4",
+            "type": "message",
+            "text": "9",
+            "user": "U0111B8S0LX",
+            "ts": "1675440830.003689",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "Q7nT6",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "9"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "8a5261c4-ee48-4dcd-86e4-3652ec28b849",
+            "type": "message",
+            "text": "8",
+            "user": "U0111B8S0LX",
+            "ts": "1675440829.479709",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "RYxk6",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "8"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "2e51e0b2-7ce1-42ef-8577-d51aadb0fce4",
+            "type": "message",
+            "text": "7",
+            "user": "U0111B8S0LX",
+            "ts": "1675440828.984909",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "U0o",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "7"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "496faf14-6b70-4abe-92df-3a170078cc50",
+            "type": "message",
+            "text": "6",
+            "user": "U0111B8S0LX",
+            "ts": "1675440828.570099",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "0yX+",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "8df7562a-624b-4fa8-902c-44a91db6aebd",
+            "type": "message",
+            "text": "5",
+            "user": "U0111B8S0LX",
+            "ts": "1675440827.999869",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "RjqbX",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "81766574-00bd-4749-a0b4-09620666d86d",
+            "type": "message",
+            "text": "4",
+            "user": "U0111B8S0LX",
+            "ts": "1675440827.502429",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "7ZGm",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "6dd4a7e1-8aea-42ab-9104-1f2732e79522",
+            "type": "message",
+            "text": "3",
+            "user": "U0111B8S0LX",
+            "ts": "1675440827.022589",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "NkiJs",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "adbb0e6b-a1e6-4889-95c0-4c8826af157c",
+            "type": "message",
+            "text": "2",
+            "user": "U0111B8S0LX",
+            "ts": "1675440826.551909",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "EeY",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "02f80e60-9e0c-43fd-b349-38991c5580a4",
+            "type": "message",
+            "text": "1",
+            "user": "U0111B8S0LX",
+            "ts": "1675440826.125669",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "xMq6c",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        }
+    ],
+    "has_more": false,
+    "is_limited": true,
+    "pin_count": 0,
+    "channel_actions_ts": null,
+    "channel_actions_count": 0
+}

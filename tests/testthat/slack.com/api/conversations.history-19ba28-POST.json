@@ -1,0 +1,88 @@
+{
+    "ok": true,
+    "messages": [
+        {
+            "client_msg_id": "496faf14-6b70-4abe-92df-3a170078cc50",
+            "type": "message",
+            "text": "6",
+            "user": "U0111B8S0LX",
+            "ts": "1675440828.570099",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "0yX+",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "8df7562a-624b-4fa8-902c-44a91db6aebd",
+            "type": "message",
+            "text": "5",
+            "user": "U0111B8S0LX",
+            "ts": "1675440827.999869",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "RjqbX",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        },
+        {
+            "client_msg_id": "81766574-00bd-4749-a0b4-09620666d86d",
+            "type": "message",
+            "text": "4",
+            "user": "U0111B8S0LX",
+            "ts": "1675440827.502429",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "7ZGm",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "TNE5M7UGK"
+        }
+    ],
+    "has_more": true,
+    "is_limited": false,
+    "pin_count": 0,
+    "channel_actions_ts": null,
+    "channel_actions_count": 0,
+    "response_metadata": {
+        "next_cursor": "bmV4dF90czoxNjc1NDQwODI3MDIyNTg5"
+    }
+}
