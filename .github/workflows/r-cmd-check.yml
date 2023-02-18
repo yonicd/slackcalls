@@ -5,7 +5,7 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
-name: r-cmd-check
+name: R-CMD-check
 
 jobs:
   check:
