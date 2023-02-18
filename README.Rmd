@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_26-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2023_02_18-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
 [![R-CMD-check](https://github.com/yonicd/slackcalls/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackcalls/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slackcalls?branch=master)
 <!-- badges: end -->
