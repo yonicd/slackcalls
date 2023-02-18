@@ -6,12 +6,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_26-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
-[![R-win build
-status](https://github.com/yonicd/slackcalls/workflows/R-win/badge.svg)](https://github.com/yonicd/slackcalls)
-[![R-mac build
-status](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackcalls)
-[![R-linux build
-status](https://github.com/yonicd/slackcalls/workflows/R-linux/badge.svg)](https://github.com/yonicd/slackcalls)
+[![R-CMD-check](https://github.com/yonicd/slackcalls/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackcalls/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slackcalls?branch=master)
 <!-- badges: end -->
@@ -20,12 +15,12 @@ coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)
 
 `slackcalls` is a part of `slackverse`
 
-|                                                                                                                                 |                                                                                                                           |                                                                                                                              |
-|:-------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------:|
-|                                                                                                                                 | slackcalls<br>[![](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackcalls) |                                                                                                                              |
-| slackthreads<br>[![](https://github.com/yonicd/slackthreads/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackthreads) | slackteams<br>[![](https://github.com/yonicd/slackteams/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackteams) |  slackposts<br>[![](https://github.com/yonicd/slackposts/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackposts)   |
-|                                                                                                                                 |                                                                                                                           | slackblocks<br>[![](https://github.com/yonicd/slackblocks/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackblocks) |
-|                                                                                                                                 |                                                                                                                           | slackreprex<br>[![](https://github.com/yonicd/slackreprex/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackreprex) |
+|                                                                                                                                            |                                                                                                                                      |                                                                                                                                         |
+|:------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|
+|                                                                                                                                            | slackcalls<br>[![](https://github.com/yonicd/slackcalls/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackcalls) |                                                                                                                                         |
+| slackthreads<br>[![](https://github.com/yonicd/slackthreads/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackthreads) | slackteams<br>[![](https://github.com/yonicd/slackteams/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackteams) |  slackposts<br>[![](https://github.com/yonicd/slackposts/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackposts)   |
+|                                                                                                                                            |                                                                                                                                      | slackblocks<br>[![](https://github.com/yonicd/slackblocks/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackblocks) |
+|                                                                                                                                            |                                                                                                                                      | slackreprex<br>[![](https://github.com/yonicd/slackreprex/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackreprex) |
 
 `slackcalls` is the backend of `slackverse` it interacts with Slack API
 methods

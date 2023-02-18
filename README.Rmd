@@ -16,9 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_26-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
-[![R-win build status](https://github.com/yonicd/slackcalls/workflows/R-win/badge.svg)](https://github.com/yonicd/slackcalls)
-[![R-mac build status](https://github.com/yonicd/slackcalls/workflows/R-mac/badge.svg)](https://github.com/yonicd/slackcalls)
-[![R-linux build status](https://github.com/yonicd/slackcalls/workflows/R-linux/badge.svg)](https://github.com/yonicd/slackcalls)
+[![R-CMD-check](https://github.com/yonicd/slackcalls/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/slackcalls/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slackcalls?branch=master)
 <!-- badges: end -->
 
@@ -29,7 +27,7 @@ knitr::opts_chunk$set(
 ```{r,echo = FALSE, eval = TRUE}
 pkgs <- sprintf('slack%s',c('calls','teams','posts','blocks','threads','reprex'))
 
-badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/workflows/R-mac/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
+badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
 
 names(badges) <- pkgs
 
