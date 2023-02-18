@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-18 February, 2023 02:44:25
+18 February, 2023 02:51:06
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -29,9 +29,9 @@ Unit Test summary is created using the
 
 | file                                        |  n |  time | error | failed | skipped | warning |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-chat.R](testthat/test-chat.R)         |  7 | 0.486 |     0 |      0 |       0 |       0 |
-| [test-files.R](testthat/test-files.R)       | 15 | 1.216 |     0 |      0 |       0 |       0 |
-| [test-generics.R](testthat/test-generics.R) | 21 | 7.199 |     0 |      0 |       0 |       0 |
+| [test-chat.R](testthat/test-chat.R)         |  7 | 0.507 |     0 |      0 |       0 |       0 |
+| [test-files.R](testthat/test-files.R)       | 15 | 1.048 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R) | 21 | 7.211 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -39,18 +39,18 @@ Unit Test summary is created using the
 
 | file                                                  | context  | test                                          | status | n |  time |
 | :---------------------------------------------------- | :------- | :-------------------------------------------- | :----- | -: | ----: |
-| [test-chat.R](testthat/test-chat.R#L49_L57)           | chat     | chat\_slack (etc) works                       | PASS   | 5 | 0.367 |
-| [test-chat.R](testthat/test-chat.R#L84_L94)           | chat     | cleanup works                                 | PASS   | 2 | 0.119 |
-| [test-files.R](testthat/test-files.R#L49_L58)         | files    | files\_slack can upload text                  | PASS   | 5 | 0.186 |
-| [test-files.R](testthat/test-files.R#L79_L84)         | files    | files\_slack can list files                   | PASS   | 2 | 0.220 |
-| [test-files.R](testthat/test-files.R#L90_L98)         | files    | files\_slack can get info                     | PASS   | 3 | 0.079 |
-| [test-files.R](testthat/test-files.R#L123_L132)       | files    | files\_slack can upload files                 | PASS   | 3 | 0.213 |
-| [test-files.R](testthat/test-files.R#L139_L152)       | files    | files\_slack can clean up                     | PASS   | 2 | 0.518 |
-| [test-generics.R](testthat/test-generics.R#L56_L65)   | generics | post\_slack works                             | PASS   | 3 | 0.079 |
-| [test-generics.R](testthat/test-generics.R#L79_L91)   | generics | post\_slack creates appropriate error objects | PASS   | 4 | 0.049 |
-| [test-generics.R](testthat/test-generics.R#L98_L106)  | generics | post\_slack limits work                       | PASS   | 6 | 0.518 |
-| [test-generics.R](testthat/test-generics.R#L139_L149) | generics | post\_slack respects max                      | PASS   | 4 | 0.338 |
-| [test-generics.R](testthat/test-generics.R#L192_L203) | generics | rate limits work                              | PASS   | 4 | 6.215 |
+| [test-chat.R](testthat/test-chat.R#L49_L57)           | chat     | chat\_slack (etc) works                       | PASS   | 5 | 0.371 |
+| [test-chat.R](testthat/test-chat.R#L84_L94)           | chat     | cleanup works                                 | PASS   | 2 | 0.136 |
+| [test-files.R](testthat/test-files.R#L49_L58)         | files    | files\_slack can upload text                  | PASS   | 5 | 0.207 |
+| [test-files.R](testthat/test-files.R#L79_L84)         | files    | files\_slack can list files                   | PASS   | 2 | 0.180 |
+| [test-files.R](testthat/test-files.R#L90_L98)         | files    | files\_slack can get info                     | PASS   | 3 | 0.072 |
+| [test-files.R](testthat/test-files.R#L123_L132)       | files    | files\_slack can upload files                 | PASS   | 3 | 0.208 |
+| [test-files.R](testthat/test-files.R#L139_L152)       | files    | files\_slack can clean up                     | PASS   | 2 | 0.381 |
+| [test-generics.R](testthat/test-generics.R#L56_L65)   | generics | post\_slack works                             | PASS   | 3 | 0.076 |
+| [test-generics.R](testthat/test-generics.R#L79_L91)   | generics | post\_slack creates appropriate error objects | PASS   | 4 | 0.051 |
+| [test-generics.R](testthat/test-generics.R#L98_L106)  | generics | post\_slack limits work                       | PASS   | 6 | 0.492 |
+| [test-generics.R](testthat/test-generics.R#L139_L149) | generics | post\_slack respects max                      | PASS   | 4 | 0.363 |
+| [test-generics.R](testthat/test-generics.R#L192_L203) | generics | rate limits work                              | PASS   | 4 | 6.229 |
 
 </details>
 
@@ -61,7 +61,7 @@ Unit Test summary is created using the
 | Field    | Value                         |                                                                                                                                                                                                                                                                    |
 | :------- | :---------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Version  | R version 4.2.2 (2022-10-31)  |                                                                                                                                                                                                                                                                    |
-| Platform | x86\_64-pc-linux-gnu (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/81e573b319e24049df017d074fdd8e4ad7d05f60/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
+| Platform | x86\_64-pc-linux-gnu (64-bit) | <a href="https://github.com/yonicd/slackcalls/commit/eb584aaafe778e19e415595e752feb555874de5f/checks" target="_blank"><span title="Built on Github Actions">![](https://github.com/metrumresearchgroup/covrpage/blob/actions/inst/logo/gh.png?raw=true)</span></a> |
 | Running  | Ubuntu 22.04.1 LTS            |                                                                                                                                                                                                                                                                    |
 | Language | C                             |                                                                                                                                                                                                                                                                    |
 | Timezone | UTC                           |                                                                                                                                                                                                                                                                    |
