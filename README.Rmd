@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 ```{r,echo = FALSE, eval = TRUE}
 pkgs <- sprintf('slack%s',c('calls','teams','posts','blocks','threads','reprex'))
 
-badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
+badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
 
 names(badges) <- pkgs
 
