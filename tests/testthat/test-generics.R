@@ -123,15 +123,24 @@ test_that("post_slack limits work", {
     3L
   )
 
+  # Some ids change, somewhat surprisingly, so clear out those things before
+  # comparison.
+  for (i in 1:12) {
+    test_result$messages[[i]]$blocks[[1]]$block_id <- NULL
+    test_result_limit_3$messages[[i]]$blocks[[1]]$block_id <- NULL
+  }
+
   # The 1:12 is to avoid going back too far to where some things are weird.
   expect_identical(
     test_result_limit_3$messages[1:12],
-    test_result$messages[1:12]
+    test_result$messages[1:12],
+    list_as_map = TRUE # Sort names.
   )
 
   expect_identical(
     names(test_result_limit_3),
-    append(names(test_result), "response_metadata")
+    append(names(test_result), "response_metadata"),
+    list_as_map = TRUE
   )
 })
 
