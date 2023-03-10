@@ -1,17 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# slackcalls
+
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2023_02_27-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
 [![R-CMD-check](https://github.com/yonicd/slackcalls/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/slackcalls/actions/workflows/r-cmd-check.yml)
 [![Codecov test
-coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slackcalls?branch=master)
+coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/slackcalls?branch=master)
 <!-- badges: end -->
-
-# slackcalls
 
 `slackcalls` is part of the `slackverse`
 
