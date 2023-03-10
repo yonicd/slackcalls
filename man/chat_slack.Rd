@@ -46,9 +46,9 @@ chat methods available to post to
 For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
 \examples{
-\dontshow{if (Sys.getenv('SLACK_API_TOKEN') != "") (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (Sys.getenv("SLACK_API_TOKEN") != "") (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 chat_slack(
-  text = 'my message',
+  text = "my message",
   channel = "general",
   token = "my_api_token"
 )

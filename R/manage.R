@@ -1,18 +1,18 @@
 # Files  ----
-file_push <- function(res){
-
-  .slack$stack$file <- c(.slack$stack$file,res$file$id)
+file_push <- function(res) {
+  .slack$stack$file <- c(.slack$stack$file, res$file$id)
 
   post_push_internal(
     list(
-      list(ts = res$file$shares$private[[1]][[1]]$ts,
-         channel = names(res$file$shares$private))
+      list(
+        ts = res$file$shares$private[[1]][[1]]$ts,
+        channel = names(res$file$shares$private)
       )
+    )
   )
-
 }
 
-file_pop <- function(){
+file_pop <- function() {
   .slack$stack$file <- .slack$stack$file[-length(.slack$stack$file)]
 }
 
@@ -26,9 +26,9 @@ file_pop <- function(){
 #' @return NULL
 #' @rdname file_manage
 #' @export
-file_last <- function(){
-  if(length(.slack$stack$file)==0){
-    warning('No file in stack')
+file_last <- function() {
+  if (length(.slack$stack$file) == 0) {
+    warning("No file in stack")
     return(invisible(NULL))
   }
 
@@ -37,25 +37,25 @@ file_last <- function(){
 
 #' @rdname file_manage
 #' @export
-file_stack <- function(){
+file_stack <- function() {
   .slack$stack$file
 }
 
 # Posts ----
 
-post_push <- function(res){
-
-  post_push_internal(list(list(ts = res$ts,channel = res$channel, thread_ts = res$message$thread_ts)))
-
+post_push <- function(res) {
+  post_push_internal(list(list(ts = res$ts, channel = res$channel, thread_ts = res$message$thread_ts)))
 }
 
-post_push_internal <- function(obj){
-  .slack$stack$post <- append(.slack$stack$post,obj)
+post_push_internal <- function(obj) {
+  .slack$stack$post <- append(.slack$stack$post, obj)
 
-  .slack$stack$post <- lapply(.slack$stack$post,function(x) {structure(x,class = 'slackpost')})
+  .slack$stack$post <- lapply(.slack$stack$post, function(x) {
+    structure(x, class = "slackpost")
+  })
 }
 
-post_pop <- function(){
+post_pop <- function() {
   .slack$stack$post[length(.slack$stack$post)] <- NULL
 }
 
@@ -69,9 +69,9 @@ post_pop <- function(){
 #' @return NULL
 #' @rdname post_manage
 #' @export
-post_last <- function(){
-  if(length(.slack$stack$post)==0){
-    warning('No posts in stack')
+post_last <- function() {
+  if (length(.slack$stack$post) == 0) {
+    warning("No posts in stack")
     return(invisible(NULL))
   }
 
@@ -80,6 +80,6 @@ post_last <- function(){
 
 #' @rdname post_manage
 #' @export
-post_stack <- function(){
+post_stack <- function() {
   .slack$stack$post
 }

@@ -25,12 +25,11 @@ knitr::opts_chunk$set(
 `slackcalls` is part of the `slackverse`
 
 ```{r,echo = FALSE, eval = TRUE}
-pkgs <- sprintf('slack%s',c('calls','teams','posts','blocks','threads','reprex'))
+pkgs <- sprintf("slack%s", c("calls", "teams", "posts", "blocks", "threads", "reprex"))
 
-badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
+badges <- sprintf("%s<br>[![](https://github.com/yonicd/%s/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/%s)", pkgs, pkgs, pkgs)
 
 names(badges) <- pkgs
-
 ```
 
 ||||

@@ -30,7 +30,8 @@ if (slack_api_test_mode == "true" || slack_api_test_mode == "capture") {
   if (Sys.getenv("SLACK_API_TOKEN") == "") {
     stop(
       "No SLACK_API_TOKEN available, cannot test. \n",
-      "Unset SLACK_API_TEST_MODE to use mock.")
+      "Unset SLACK_API_TEST_MODE to use mock."
+    )
   }
 
   if (slack_api_test_mode == "true") {
@@ -50,7 +51,7 @@ test_that("chat_slack (etc) works", {
     with_mock_api({
       test_result <- chat_slack(
         channel = slack_test_channel,
-        text = 'test'
+        text = "test"
       )
     }),
     NA
@@ -60,18 +61,18 @@ test_that("chat_slack (etc) works", {
 
   expect_identical(
     names(test_result),
-    c('ok','channel','ts','message')
+    c("ok", "channel", "ts", "message")
   )
 
   expect_identical(
     post_last(),
     structure(
       list(
-        ts  = test_result$ts,
+        ts = test_result$ts,
         channel = test_result$channel,
         thread_ts = NULL
       ),
-      class = 'slackpost'
+      class = "slackpost"
     )
   )
 

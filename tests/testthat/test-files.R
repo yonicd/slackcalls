@@ -30,7 +30,8 @@ if (slack_api_test_mode == "true" || slack_api_test_mode == "capture") {
   if (Sys.getenv("SLACK_API_TOKEN") == "") {
     stop(
       "No SLACK_API_TOKEN available, cannot test. \n",
-      "Unset SLACK_API_TEST_MODE to use mock.")
+      "Unset SLACK_API_TEST_MODE to use mock."
+    )
   }
 
   if (slack_api_test_mode == "true") {
@@ -142,7 +143,7 @@ test_that("files_slack can clean up", {
         file_stack(),
         function(x) {
           files_slack(
-            slack_method = 'files.delete',
+            slack_method = "files.delete",
             file = x
           )
         }
