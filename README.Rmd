@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 # slackcalls
 
-`slackcalls` is a part of `slackverse`
+`slackcalls` is part of the `slackverse`
 
 ```{r,echo = FALSE, eval = TRUE}
 pkgs <- sprintf('slack%s',c('calls','teams','posts','blocks','threads','reprex'))
@@ -41,11 +41,28 @@ names(badges) <- pkgs
 |||`r badges[pkgs[6]]`|
 
 
-`slackcalls` is the backend of `slackverse` it interacts with Slack API methods
+`slackcalls` is the backend of the `slackverse`.
+It interacts with Slack API methods.
 
+  - [Installation](#installation)
   - [Posting](#posting-to-slack)
   - [Querying](#querying-slack)
   - [Storage](#storage)
+
+## Installation
+
+Install the released version of {slackcalls} from CRAN:
+
+``` r
+install.packages("slackcalls")
+```
+
+Or install the development version of {slackcalls} from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("yonicd/slackcalls")
+```
 
 ## Posting to Slack
 
