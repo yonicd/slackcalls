@@ -1,11 +1,11 @@
 Type: Package
 Package: slackcalls
-Title: Generics for Slack API
+Title: Generics for 'Slack' API
 Version: 0.0.7
 Authors@R: c(
     person(given = "Jonathan",
            family = "Sidi",
-           role = c("cre","aut"),
+           role = c("cre", "aut", "cph"),
            email = "yonicd@gmail.com",
            comment = c(ORCID = "0000-0002-4222-1819")),
     person(given = "Jon",
@@ -14,7 +14,7 @@ Authors@R: c(
            email = "jonthegeek@gmail.com",
            comment = c(ORCID = "0000-0003-4781-4346"))
     )
-Description: Generic functions to construct API calls to Slack.
+Description: Generic functions to construct API calls to 'Slack'.
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/yonicd/slackcalls
