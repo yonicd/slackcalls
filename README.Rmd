@@ -13,24 +13,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2023_02_27-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
-[![R-CMD-check](https://github.com/yonicd/slackcalls/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/slackcalls/actions/workflows/r-cmd-check.yml)
-[![Codecov test coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/slackcalls?branch=master)
-<!-- badges: end -->
-
 # slackcalls
 
-`slackcalls` is a part of `slackverse`
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2023_02_27-brightgreen.svg)](http://tinyurl.com/ux5kpl9)
+[![R-CMD-check](https://github.com/yonicd/slackcalls/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/slackcalls/actions/workflows/r-cmd-check.yml)
+[![Codecov test coverage](https://codecov.io/gh/yonicd/slackcalls/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/slackcalls?branch=master)
+<!-- badges: end -->
+
+
+`slackcalls` is part of the `slackverse`
 
 ```{r,echo = FALSE, eval = TRUE}
-pkgs <- sprintf('slack%s',c('calls','teams','posts','blocks','threads','reprex'))
+pkgs <- sprintf("slack%s", c("calls", "teams", "posts", "blocks", "threads", "reprex"))
 
-badges <- sprintf('%s<br>[![](https://github.com/yonicd/%s/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/%s)',pkgs,pkgs,pkgs)
+badges <- sprintf("%s<br>[![](https://github.com/yonicd/%s/actions/workflows/r-cmd-check.yml/badge.svg)](https://github.com/yonicd/%s)", pkgs, pkgs, pkgs)
 
 names(badges) <- pkgs
-
 ```
 
 ||||
@@ -41,11 +41,28 @@ names(badges) <- pkgs
 |||`r badges[pkgs[6]]`|
 
 
-`slackcalls` is the backend of `slackverse` it interacts with Slack API methods
+`slackcalls` is the backend of the `slackverse`.
+It interacts with Slack API methods.
 
+  - [Installation](#installation)
   - [Posting](#posting-to-slack)
   - [Querying](#querying-slack)
   - [Storage](#storage)
+
+## Installation
+
+Install the released version of {slackcalls} from CRAN:
+
+``` r
+install.packages("slackcalls")
+```
+
+Or install the development version of {slackcalls} from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("yonicd/slackcalls")
+```
 
 ## Posting to Slack
 

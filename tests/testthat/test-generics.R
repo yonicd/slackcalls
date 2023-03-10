@@ -37,7 +37,8 @@ if (slack_api_test_mode == "true" || slack_api_test_mode == "capture") {
   if (Sys.getenv("SLACK_API_TOKEN") == "") {
     stop(
       "No SLACK_API_TOKEN available, cannot test. \n",
-      "Unset SLACK_API_TEST_MODE to use mock.")
+      "Unset SLACK_API_TEST_MODE to use mock."
+    )
   }
 
   if (slack_api_test_mode == "true") {
@@ -173,7 +174,6 @@ test_that("post_slack respects max", {
   # test seemed to work before because there weren't enough messages to get the
   # actual limit.
   expect_equal(length(test_result$messages), 15L)
-
 })
 
 test_that("rate limits work", {

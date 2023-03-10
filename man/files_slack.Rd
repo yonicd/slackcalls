@@ -26,6 +26,8 @@ respected until rate_limit is set to NULL. Default: None.}
 }
 \value{
 httr response
+
+A list with an additional class corresponding to \code{slack_method}.
 }
 \description{
 upload/info/list/delete files
@@ -42,33 +44,32 @@ files methods available to post to
 For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
 \examples{
-\dontrun{
+\dontshow{if (Sys.getenv("SLACK_API_TOKEN") != "") (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 files_slack(
-  method = 'files.upload',
+  method = "files.upload",
   channel = "general",
-  token = Sys.getenv('SLACK_API_TOKEN'),
-  content = 'wow'
+  token = Sys.getenv("SLACK_API_TOKEN"),
+  content = "wow"
 )
 
-tf <- tempfile(fileext = '.r')
+tf <- tempfile(fileext = ".r")
 cat(
   utils::capture.output(utils::sessionInfo()),
   file = tf,
-  sep = '\n'
+  sep = "\n"
 )
 
 files_slack(
-  method = 'files.upload',
+  method = "files.upload",
   channel = "general",
-  token = Sys.getenv('SLACK_API_TOKEN'),
+  token = Sys.getenv("SLACK_API_TOKEN"),
   file = tf,
-  filename = 'sessionInfo.R',
-  filetype = 'r',
-  initial_comment = 'here is my session info',
-  title = 'R sessionInfo'
+  filename = "sessionInfo.R",
+  filetype = "r",
+  initial_comment = "here is my session info",
+  title = "R sessionInfo"
 )
 
 unlink(tf)
-
-}
+\dontshow{\}) # examplesIf}
 }

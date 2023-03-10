@@ -10,11 +10,15 @@ post_last()
 post_stack()
 }
 \description{
-Query/Remove posts created by slackreprex. Each post is logged
-for channel and timestamp (ts) in an internal package environment. Which
-serves the purpose of querying or removing specific posts.
+Find posts created in the slackverse. Each post is logged for
+channel and timestamp (ts) in an internal package environment. This serves
+the purpose of querying or removing specific posts.
 \itemize{
 \item post_stack: lists in decreasing order the posts sent during the session.
 \item last_post: retrieves the last post sent.
 }
+}
+\examples{
+post_last()
+post_stack()
 }
