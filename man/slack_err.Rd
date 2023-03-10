@@ -15,3 +15,11 @@ character
 \description{
 Returns error message from a Slack API response
 }
+\examples{
+# obj represents an object returned from a post to the 'Slack' API.
+obj <- list(
+  error = "Example error message.",
+  response_metadata = list(messages = c("Example messages.", "Another."))
+)
+slack_err(obj)
+}

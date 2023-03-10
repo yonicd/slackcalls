@@ -19,3 +19,7 @@ serves the purpose of querying or removing specific files.
 \item rm_last_file: deletes the last file from the specified channel.
 }
 }
+\examples{
+file_last()
+file_stack()
+}

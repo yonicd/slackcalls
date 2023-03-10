@@ -211,6 +211,13 @@ call_slack <- function(slack_method, body, token = NULL) {
 #' @return character
 #' @rdname slack_err
 #' @export
+#' @examples
+#' # obj represents an object returned from a post to the 'Slack' API.
+#' obj <- list(
+#'   error = "Example error message.",
+#'   response_metadata = list(messages = c("Example messages.", "Another."))
+#' )
+#' slack_err(obj)
 slack_err <- function(obj) {
   ret <- paste(
     c(
@@ -230,7 +237,7 @@ slack_err <- function(obj) {
 #' @param res httr response
 #' @return httr response content
 #' @rdname validate_response
-#' @export
+#' @keywords internal
 #' @importFrom httr stop_for_status content
 validate_response <- function(res) {
   httr::stop_for_status(res)
@@ -281,22 +288,6 @@ validate_upload <- function(slack_method = "files.upload", body, token = NULL) {
   ret <- validate_response(res)
 
   invisible(ret)
-}
-
-
-#' @title Parse Calls
-#' @description Function used to translate R side functions to slack api methods
-#'   to interact with slack.
-#' @return api method to be used
-#' @rdname parse_call
-#' @export
-parse_call <- function() {
-  tb <- .traceback(1)
-  idx <- which(sapply(tb, function(x) grepl(x[1], pattern = "post\\_slack"))) + 1
-  call_str <- paste0(tb[[idx]], collapse = "")
-  foo <- gsub("\\((.*?)$", "", call_str)
-  no_get <- gsub("^(.*?)get_", "", foo)
-  gsub("\\_", ".", no_get)
 }
 
 paginate_ <- function(res, max_results = Inf, max_calls = Inf, token = NULL) {

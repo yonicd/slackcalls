@@ -15,3 +15,4 @@ httr response content
 \description{
 Check Slack API Response for errors
 }
+\keyword{internal}
