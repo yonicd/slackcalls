@@ -26,6 +26,8 @@ respected until rate_limit is set to NULL. Default: None.}
 }
 \value{
 httr response
+
+A list with an additional class corresponding to \code{slack_method}.
 }
 \description{
 upload/info/list/delete files
@@ -42,7 +44,7 @@ files methods available to post to
 For a full list of chat methods see \href{https://api.slack.com/methods}{here}
 }
 \examples{
-\dontrun{
+\dontshow{if (Sys.getenv('SLACK_API_TOKEN') != "") (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 files_slack(
   method = 'files.upload',
   channel = "general",
@@ -69,6 +71,5 @@ files_slack(
 )
 
 unlink(tf)
-
-}
+\dontshow{\}) # examplesIf}
 }

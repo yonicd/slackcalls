@@ -46,11 +46,11 @@ A list with an additional class corresponding to \code{slack_method}.
 Safely call a Slack API method, with automatic pagination.
 }
 \examples{
-\dontrun{
+\dontshow{if (Sys.getenv('SLACK_API_TOKEN') != "") (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 post_slack(
   slack_method = "conversations.history",
   channel = "general",
   token = "my_api_token"
 )
-}
+\dontshow{\}) # examplesIf}
 }

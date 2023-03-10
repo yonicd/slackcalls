@@ -19,14 +19,12 @@
 #'   is set for this method in any call in this session, that rate limit will be
 #'   respected until rate_limit is set to NULL. Default: None.
 #' @return A list with an additional class corresponding to \code{slack_method}.
-#' @examples
-#' \dontrun{
+#' @examplesIf Sys.getenv('SLACK_API_TOKEN') != ""
 #' post_slack(
 #'   slack_method = "conversations.history",
 #'   channel = "general",
 #'   token = "my_api_token"
 #' )
-#' }
 #' @rdname post_slack
 #' @export
 post_slack <- function(slack_method,
@@ -70,14 +68,13 @@ post_slack <- function(slack_method,
 #'    - chat.update
 #'
 #' For a full list of chat methods see [here](https://api.slack.com/methods)
-#' @examples
-#' \dontrun{
+#' @return A list with an additional class corresponding to \code{slack_method}.
+#' @examplesIf Sys.getenv('SLACK_API_TOKEN') != ""
 #' chat_slack(
 #'   text = 'my message',
 #'   channel = "general",
 #'   token = "my_api_token"
 #' )
-#' }
 #' @rdname chat_slack
 #' @export
 chat_slack <- function(slack_method = 'chat.postMessage',
@@ -95,7 +92,7 @@ chat_slack <- function(slack_method = 'chat.postMessage',
     post_pop()
   }
 
-  if('push'%in%action)
+  if ('push' %in% action)
     post_push(res)
 
   invisible(res)
@@ -116,8 +113,8 @@ chat_slack <- function(slack_method = 'chat.postMessage',
 #'    - files.list
 #'
 #' For a full list of chat methods see [here](https://api.slack.com/methods)
-#' @examples
-#' \dontrun{
+#' @return A list with an additional class corresponding to \code{slack_method}.
+#' @examplesIf Sys.getenv('SLACK_API_TOKEN') != ""
 #' files_slack(
 #'   method = 'files.upload',
 #'   channel = "general",
@@ -145,7 +142,6 @@ chat_slack <- function(slack_method = 'chat.postMessage',
 #'
 #' unlink(tf)
 #'
-#' }
 #' @rdname files_slack
 #' @export
 files_slack <- function(slack_method = 'files.upload',
